@@ -8,13 +8,13 @@ $(function() {
         submitSuccess: function($form, event) {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
-            event.preventDefault();
+            //event.preventDefault();
             
-            var firstName = name; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(' ') >= 0) {
-                firstName = name.split(' ').slice(0, -1).join(' ');
-            }
+            //var firstName = name; // For Success/Failure Message
+            //// Check for white space in name for Success/Fail message
+            //if (firstName.indexOf(' ') >= 0) {
+            //    firstName = name.split(' ').slice(0, -1).join(' ');
+            //}
             //$.ajax({
             //    url: encodeURI("https://formspree.io/trungk18@email.com"),
             //    type: "POST",

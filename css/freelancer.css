@@ -461,3 +461,13 @@ footer .footer-below {
     display: none;
     opacity: 0;
 }
+
+.sub-intro-text h3 {
+    text-transform: none;
+}
+
+.sub-intro-text ul > li {
+    margin: 10px 0;
+    font-size: 1.5em;
+    text-align:left;
+}

@@ -19,7 +19,7 @@ $(function() {
                 url: encodeURI("https://formspree.io/trungk18@email.com"),
                 type: "POST",
                 data: $('#contactForm').serialize(),
-                cache: false,
+                dataType: 'json',
                 success: function() {
                     // Enable button & show success message
                     $("#btnSubmit").attr("disabled", false);

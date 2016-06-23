@@ -51,19 +51,19 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll">
+                    <li>
                         <a href="#portfolio">Portfolio</a>
                     </li>
-                    <li class="page-scroll">
+                    <li>
                         <a href="#community">Community</a>
                     </li>
-                    <li class="page-scroll">
+                    <li>
                         <a href="#skill">Skill</a>
                     </li>
-                    <li class="page-scroll">
+                    <li>
                         <a href="#about">About</a>
                     </li>
-                    <li class="page-scroll">
+                    <li>
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -216,7 +216,7 @@
                 <hr class="star-light">
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="item in repositoryList" ng-if="!item.fork">
+                <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="item in repositoryList" ng-if="!item.fork && item.name.indexOf('trungk18') == -1">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <a href="{{item.html_url}}">
@@ -939,7 +939,7 @@
             </div>
         </div>
     </div>
-
+    <a href="#0" class="cd-top">Top</a>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->

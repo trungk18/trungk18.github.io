@@ -132,6 +132,7 @@ header {
         padding: 25px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
+        -o-transition: padding .3s;
         transition: padding .3s;
     }
 
@@ -139,6 +140,7 @@ header {
             font-size: 2em;
             -webkit-transition: all .3s;
             -moz-transition: all .3s;
+            -o-transition: all .3s;
             transition: all .3s;
         }
 
@@ -224,20 +226,17 @@ section {
             color: #fff;
         }
 
-    section.skill-wrap {
+    section.skill-wrap .progress-bar {
+        background: #18bc9c;
     }
 
-        section.skill-wrap .progress-bar {
-            background: #18bc9c;
-        }
+    section.skill-wrap .progress {
+        height: 20px;
+    }
 
-        section.skill-wrap .progress {
-            height: 20px;
+        section.skill-wrap .progress span {
+            font: 18px/18px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-            section.skill-wrap .progress span {
-                font: 18px/18px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
 
 
 @media(max-width:767px) {
@@ -270,6 +269,7 @@ section {
             background: rgba(24,188,156,.9);
             -webkit-transition: all ease .5s;
             -moz-transition: all ease .5s;
+            -o-transition: all ease .5s;
             transition: all ease .5s;
         }
 
@@ -313,6 +313,9 @@ section {
     font-size: 20px;
     color: #fff;
     background: 0 0;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 
@@ -355,15 +358,14 @@ section {
         font-size: .85em;
         line-height: 1.764705882em;
         vertical-align: middle;
-        vertical-align: baseline;
         opacity: 0;
         -webkit-transition: top .3s ease,opacity .3s ease;
         -moz-transition: top .3s ease,opacity .3s ease;
-        -ms-transition: top .3s ease,opacity .3s ease;
+        -o-transition: top .3s ease,opacity .3s ease;
         transition: top .3s ease,opacity .3s ease;
     }
 
-    .floating-label-form-group::not(:first-child) {
+    .floating-label-form-group:not(:first-child) {
         padding-left: 14px;
         border-left: 1px solid #eee;
     }
@@ -441,78 +443,82 @@ footer {
             outline: 0;
         }
 
-.portfolio-modal {
+
+.portfolio-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    -moz-background-clip: border-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
-    .portfolio-modal .modal-content {
-        padding: 100px 0;
-        min-height: 100%;
-        border: 0;
-        border-radius: 0;
-        text-align: center;
-        background-clip: border-box;
-        -webkit-box-shadow: none;
-        box-shadow: none;
+.portfolio-modal section {
+    padding: 0;
+}
+
+.portfolio-modal .modal-content h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.portfolio-modal .modal-content img {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content .item-details {
+    margin: 30px 0;
+}
+
+
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+    .portfolio-modal .close-modal:hover {
+        opacity: .3;
     }
 
-    .portfolio-modal section {
-        padding: 0;
-    }
-
-    .portfolio-modal .modal-content h2 {
-        margin: 0;
-        font-size: 3em;
-    }
-
-    .portfolio-modal .modal-content img {
-        margin-bottom: 30px;
-    }
-
-    .portfolio-modal .modal-content .item-details {
-        margin: 30px 0;
-    }
-
-
-
-    .portfolio-modal .close-modal {
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        width: 75px;
+    .portfolio-modal .close-modal .lr {
+        z-index: 1051;
+        width: 1px;
         height: 75px;
-        background-color: transparent;
-        cursor: pointer;
+        margin-left: 35px;
+        background-color: #2c3e50;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
     }
 
-        .portfolio-modal .close-modal:hover {
-            opacity: .3;
-        }
-
-        .portfolio-modal .close-modal .lr {
-            z-index: 1051;
+        .portfolio-modal .close-modal .lr .rl {
+            z-index: 1052;
             width: 1px;
             height: 75px;
-            margin-left: 35px;
             background-color: #2c3e50;
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
         }
 
-            .portfolio-modal .close-modal .lr .rl {
-                z-index: 1052;
-                width: 1px;
-                height: 75px;
-                background-color: #2c3e50;
-                -webkit-transform: rotate(90deg);
-                -ms-transform: rotate(90deg);
-                transform: rotate(90deg);
-            }
-
-    .portfolio-modal .modal-backdrop {
-        display: none;
-        opacity: 0;
-    }
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
 
 .sub-intro-text h3 {
     text-transform: none;
@@ -604,12 +610,14 @@ footer {
     opacity: 0;
     -webkit-transition: opacity .3s 0s, visibility 0s .3s;
     -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    -o-transition: opacity .3s 0s, visibility 0s .3s;
     transition: opacity .3s 0s, visibility 0s .3s;
 }
 
     .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
         -webkit-transition: opacity .3s 0s, visibility 0s 0s;
         -moz-transition: opacity .3s 0s, visibility 0s 0s;
+        -o-transition: opacity .3s 0s, visibility 0s 0s;
         transition: opacity .3s 0s, visibility 0s 0s;
     }
 

@@ -40,9 +40,6 @@ $(function () {
         });
     });
 
-    // Highlight the top nav as scrolling occurs
-
-
     // Closes the Responsive Menu on Menu Item Click
     $(".navbar-collapse a").click(function () {
         $(".navbar-toggle:visible").click();

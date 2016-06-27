@@ -221,7 +221,7 @@
                 <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="item in repositoryList" ng-if="!item.fork && item.name.indexOf('trungk18') == -1">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <a href="{{item.html_url}}">
+                            <a href="{{item.html_url}}" target="_blank">
                                 <span class="panel-title-area">{{item.name}}</span>
                             </a>
                         </div>
@@ -236,6 +236,22 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p data-height="320" data-theme-id="dark" data-slug-hash="yJggrL" data-default-tab="css,result" data-user="trungk18" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/trungk18/pen/yJggrL/">CSS3 Loading - Square Blink</a> by Vo Tuan Trung (<a href="http://codepen.io/trungk18">@trungk18</a>) on <a href="http://codepen.io">CodePen</a>.</p>                    
+                </div>
+            </div>
+            <div class="row view-more text-center">
+                <h4 class="view-more-heading">View More</h4>
+                <ul class="list-inline">
+                    <li>
+                        <a target="_blank" href="https://github.com/trungk18" class="btn-social btn-outline"><i class="fa fa-fw fa-github" title="Github"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://codepen.io/trungk18/" class="btn-social btn-outline"><i class="fa fa-fw fa-codepen" title="Codepen"></i></a>
+                    </li>               
+                </ul>
             </div>
         </div>
         <div class="loading" ng-show="repositoryList == null">
@@ -416,28 +432,22 @@
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
-                                <a target="_blank" href="https://www.linkedin.com/in/trungk18" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                                <a target="_blank" href="https://www.linkedin.com/in/trungk18" class="btn-social btn-outline" title="LinkedIn"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>    
+                            <li>
+                                <a target="_blank" href="https://www.facebook.com/trungk18" class="btn-social btn-outline" title="Facebook"><i class="fa fa-fw fa-facebook"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://github.com/trungk18" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                                <a href="skype:trungk18?chat" class="btn-social btn-outline"><i class="fa fa-fw fa-skype" title="Skype"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="http://codepen.io/trungk18/" class="btn-social btn-outline"><i class="fa fa-fw fa-codepen"></i></a>
+                                <a target="_blank" href="https://www.flickr.com/photos/trungk18/" class="btn-social btn-outline" title="Flickr"><i class="fa fa-fw fa-flickr"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://www.facebook.com/trungk18" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a target="_blank" href="http://www.last.fm/user/trungk18" class="btn-social btn-outline" title="last.fm"><i class="fa fa-fw fa-lastfm"></i></a>
                             </li>
                             <li>
-                                <a href="skype:trungk18?chat" class="btn-social btn-outline"><i class="fa fa-fw fa-skype"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.flickr.com/photos/trungk18/" class="btn-social btn-outline"><i class="fa fa-fw fa-flickr"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="http://www.last.fm/user/trungk18" class="btn-social btn-outline"><i class="fa fa-fw fa-lastfm"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://soundcloud.com/trungk18" class="btn-social btn-outline"><i class="fa fa-fw fa-soundcloud"></i></a>
+                                <a target="_blank" href="https://soundcloud.com/trungk18" class="btn-social btn-outline" title="Sound Cloud"><i class="fa fa-fw fa-soundcloud"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -458,12 +468,7 @@
             </div>
         </div>
     </footer>
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visible-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
+
     <!-- Portfolio Modals -->
     <div class="portfolio-modal modal fade" id="portfolioIEX" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -948,7 +953,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
-    <script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+    <script src="https://assets.codepen.io/assets/embed/ei.js"></script>
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <!-- Custom Theme JavaScript -->

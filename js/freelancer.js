@@ -96,12 +96,12 @@ function backToTop() {
         }, scroll_top_duration
 		);
     });
-};
+}
 
 function handleEmailForm() {
     $("#contactForm input, #contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
-        submitError: function ($form, event, errors) {
+        submitError: function () {
             // additional error messages or events
         },
         submitSuccess: function ($form, event) {
@@ -119,7 +119,7 @@ function handleEmailForm() {
                 type: "POST",
                 data: $("#contactForm").serialize(),
                 dataType: "json",
-                success: function (data) {
+                success: function () {
                     // Enable button & show success message
                     $("#btnSubmit").attr("disabled", false);
                     $("#success").html("<div class='alert alert-success'>");
@@ -133,7 +133,7 @@ function handleEmailForm() {
                     //clear all fields
                     $("#contactForm").trigger("reset");
                 },
-                error: function (error) {
+                error: function () {
                     // Fail message
                     $("#success").html("<div class='alert alert-danger'>");
                     $("#success > .alert-danger").html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -143,7 +143,7 @@ function handleEmailForm() {
                     //clear all fields
                     $("#contactForm").trigger("reset");
                 },
-            })
+            });
         },
         filter: function () {
             return $(this).is(":visible");
@@ -154,7 +154,7 @@ function handleEmailForm() {
         e.preventDefault();
         $(this).tab("show");
     });
-};
+}
 
 
 

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" />
+    <link href="../css/triangle-hover.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box-container">
+            <div class="box-item" data-target="state-1">
+                <img src="../img/image-grid/img-cooking.jpg" class="wrap-background" alt="Cooking" />
+                <div class="wrap-text">
+                    <h3 class="wrap-text-heading">Cooking</h3>
+                    <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                </div>
+            </div><!-- /box-item-->
+            <div class="box-item" data-target="state-2">
+                <img src="../img/image-grid/img-notebook.jpg" class="wrap-background" alt="Notebook" />
+                <div class="wrap-text">
+                    <h3 class="wrap-text-heading">Notebook</h3>
+                    <i class="fa fa-coffee" aria-hidden="true"></i>
+                </div>
+            </div><!-- /box-item-->
+            <div class="box-item" data-target="state-3">
+                <img src="../img/image-grid/img-light.jpg" class="wrap-background" alt="Light" />
+                <div class="wrap-text">
+                    <h3 class="wrap-text-heading">Light</h3>
+                    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                </div>
+            </div><!-- /box-item-->
+            <div class="box-item" data-target="state-4">
+                <img src="../img/image-grid/img-hiking.jpg" class="wrap-background" alt="Hiking" />
+                <div class="wrap-text">
+                    <h3 class="wrap-text-heading">Hiking</h3>
+                    <i class="fa fa-paw" aria-hidden="true"></i>
+                </div>
+            </div><!-- /box-item-->
+        </div><!-- /box-container -->
+        <div class="submenu-container">
+            <div class="outer-wrapper">
+                <div class="submenu state-1">
+                    <div class="wrap-text">
+                        <h3 class="wrap-text-heading">Cooking</h3>
+                        <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                    </div>
+                </div><!-- /submenu-->
+                <div class="submenu state-2">
+                    <div class="wrap-text">
+                        <h3 class="wrap-text-heading">Notebook</h3>
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                    </div>
+                </div><!-- /submenu-->
+                <div class="submenu state-3">
+                    <div class="wrap-text">
+                        <h3 class="wrap-text-heading">Light</h3>
+                        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                    </div>
+                </div><!-- /submenu-->
+                <div class="submenu state-4">
+                    <div class="wrap-text">
+                        <h3 class="wrap-text-heading">Hiking</h3>
+                        <i class="fa fa-paw" aria-hidden="true"></i>
+                    </div>
+                </div><!-- /submenu-->
+            </div><!-- /outer-wraper-->
+        </div><!-- /menu-container -->
+    </div><!-- /wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script>
+        var s, homepage = {
+            settings: {
+                boxItem: $(".box-item"),
+                outerWrapper: $('.outer-wrapper')
+            },
+            init: function () {
+                s = this.settings;
+                this.bindUI();
+            },
+            bindUI: function () {
+                s.boxItem.hover(
+                    function () {
+                        var state = $(this).data('target');//get current target
+                        s.outerWrapper.addClass(state + ' open');//toggle triangle left
+                        $('.submenu.' + state).show();//open content
+                    }, function () {
+                        var state = $(this).data('target');//get current target
+                        s.outerWrapper.removeClass(state + ' open');//remove previous class
+                        $('.submenu.' + state).hide();//hide content
+                    });
+            }
+        };
+        $(document).ready(function () {
+            homepage.init();
+        });
+    </script>
+</body>
+</html>

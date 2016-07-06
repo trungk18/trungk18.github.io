@@ -6,7 +6,7 @@
 
 $(function () {
     //Smooth scrolling when click to nav
-    $('.navbar-fixed-top li > a').click(function (e) {
+    $('.navbar-fixed-top a').click(function (e) {
         e.preventDefault();
         var curLink = $(this);
         var scrollPoint = $(curLink.attr('href')).position().top - 70;

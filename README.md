@@ -10,6 +10,13 @@ If you’re a designer or a design agency looking for someone to implement your 
 
 What I *can* help you with:
 - Front-end development: Working with UI/UX designers to convert designs into responsive, performant and standards-compliant websites, using **HTML5, CSS and JavaScript**.
+    * Responsive Design and grid frameworks (**Bootstrap** and **Foundation**).
+    * CSS pre-processor including **LESS** and **SASS**.
+    * JavaScript MVC / MVW frameworks - **AngularJS**.
+    * **RequireJS** for file and module loader.
+    * **Bower** for dependency management.
+    * **Gulp.js** JavaScript task runners.
+    *Consumption of RESTful web APIs or web services.
 - Adding **interactions** and **animations** to existing websites/application interfaces.
 - Back-end development with .NET technology such as **ASP.NET MVC5, SharePoint 2013**.
 - Working as SharePoint Administrator.

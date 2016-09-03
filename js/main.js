@@ -6,7 +6,7 @@
         app: '../js',
         angular: 'angular/angular',
         jquery: 'jquery/dist/jquery',
-        fullpage: 'fullpage.js/jquery.fullpage'
+        fullpage: 'fullpage.js/jquery.fullPage'
     },
 
     // angular does not support AMD out of the box, put it in a shim

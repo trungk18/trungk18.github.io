@@ -1,6 +1,6 @@
-####[Vo Tuan Trung](http://trungk18.github.io/)
+##[Vo Tuan Trung](http://trungk18.github.io/)
 
-#####Front-end Developer - .NET/SharePoint Developer
+###Front-end Developer - .NET/SharePoint Developer
 
 This is my personal portfolio written with **jQuery and AngularJS using RequireJS as AMD**.
 

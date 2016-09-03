@@ -1,0 +1,155 @@
+﻿//Setup
+@mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
+    @while $i > 0 {
+        &:nth-of-type(#{$i}) {
+            animation-delay: $initial-delay + $stagger-delay * $i;
+        }
+
+        $i: $i - 1;
+    }
+}
+
+//Demo
+.skills {
+    position: relative;
+    width: 80%;
+    max-width: 960px;
+    height: 720px;
+    margin: auto;
+    margin-top: 140px;
+}
+
+.charts {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.chart {
+    margin: 30px 0 0;
+
+    &:first-child {
+        margin: 0;
+    }
+}
+
+.chart-title {
+    display: block;
+    margin: 0 0 10px;
+    font-weight: bold;
+    opacity: 0;
+    animation: 1s anim-lightspeed-in ease forwards;
+
+    .chart-dev & {
+    }
+
+    .chart-prod & {
+        animation-delay: 3s;
+    }
+
+    .chart-design & {
+        animation-delay: 4.2s;
+    }
+}
+
+.chart-horiz {
+    overflow: hidden;
+}
+
+.chart-bar {
+    $border-rad: 4px;
+    height: 30px;
+    margin-bottom: 10px;
+    background: linear-gradient(to left, #4CB8C4, #3CD3AD);
+    border-top-right-radius: $border-rad;
+    border-bottom-right-radius: $border-rad;
+    opacity: 0;
+    animation: 1s anim-lightspeed-in ease forwards;
+
+    .chart-dev & {
+        @include stagger-anim-delay(9, .5s, 0.2s);
+    }
+
+    .chart-prod & {
+        @include stagger-anim-delay(2, 3.5s, 0.2s);
+    }
+
+    .chart-design & {
+        @include stagger-anim-delay(3, 4.7s, 0.2s);
+    }
+
+    &[data-skill='35'] {
+        width: 35%;
+    }
+
+    &[data-skill='40'] {
+        width: 40%;
+    }
+
+    &[data-skill='45'] {
+        width: 45%;
+    }
+
+    &[data-skill='50'] {
+        width: 50%;
+    }
+
+    &[data-skill='55'] {
+        width: 55%;
+    }
+
+    &[data-skill='60'] {
+        width: 60%;
+    }
+
+    &[data-skill='65'] {
+        width: 65%;
+    }
+
+    &[data-skill='70'] {
+        width: 70%;
+    }
+
+    &[data-skill='75'] {
+        width: 75%;
+    }
+
+    &[data-skill='80'] {
+        width: 80%;
+    }
+
+    &[data-skill='85'] {
+        width: 85%;
+    }
+
+    &[data-skill='90'] {
+        width: 90%;
+    }
+
+    &[data-skill='95'] {
+        width: 95%;
+    }
+}
+
+.chart-label {
+    padding-left: 10px;
+    line-height: 30px;
+    color: white;
+}
+
+
+//Keyframes
+@keyframes anim-lightspeed-in {
+    0% {
+        transform: translateX(-200%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

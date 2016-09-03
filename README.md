@@ -1,8 +1,8 @@
 ####[Vo Tuan Trung](http://trungk18.github.io/)
 
-#####Front-end Developer - .NET/SharePoint Developer - SharePoint Administrator
+#####Front-end Developer - .NET/SharePoint Developer
 
-This is my personal portfolio based on [Freelancer](http://startbootstrap.com/template-overviews/freelancer/) template.
+This is my personal portfolio written with **jQuery and AngularJS using RequireJS as AMD**.
 
 I work with small and medium-sized businesses, design teams and agencies, building fast, responsive and usable website front-ends, with strong focus on **HTML5, CSS, JavaScript, responsive design and performance**.
 

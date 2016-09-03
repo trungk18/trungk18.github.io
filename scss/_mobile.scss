@@ -1,0 +1,20 @@
+﻿@import "bourbon/bourbon";
+@import 'variables';
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 480px) {
+
+    /*CARD*/
+    /**
+ * The cards
+ * Each card plays home to a front and back.
+ */
+    .card {
+        position: relative;
+        float: left;
+        text-align: center;
+        width: percentage(1/$num-of-card-mobile);
+        padding-bottom: percentage(1/$num-of-card-mobile);
+    }
+}

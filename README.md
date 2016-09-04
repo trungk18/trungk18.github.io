@@ -2,7 +2,7 @@
 
 ###Front-end Developer - .NET/SharePoint Developer
 
-This is my personal portfolio written with **jQuery and AngularJS using RequireJS as AMD**.
+This is my personal portfolio written with **HTML5, CSS3, jQuery and [TweenLite](https://greensock.com/docs/#/HTML5/GSAP/TweenLite/fromTo/)**.
 
 I work with small and medium-sized businesses, design teams and agencies, building fast, responsive and usable website front-ends, with strong focus on **HTML5, CSS, JavaScript, responsive design and performance**.
 

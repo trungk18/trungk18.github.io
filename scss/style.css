@@ -1,120 +1,6 @@
 /*----VARIABLES----*/
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-.ion-20 {
-  font-size: 20px; }
-
-.ion-21 {
-  font-size: 21px; }
-
-.ion-22 {
-  font-size: 22px; }
-
-.ion-23 {
-  font-size: 23px; }
-
-.ion-24 {
-  font-size: 24px; }
-
-.ion-25 {
-  font-size: 25px; }
-
-.ion-26 {
-  font-size: 26px; }
-
-.ion-27 {
-  font-size: 27px; }
-
-.ion-28 {
-  font-size: 28px; }
-
-.ion-29 {
-  font-size: 29px; }
-
-.ion-30 {
-  font-size: 30px; }
-
-.ion-31 {
-  font-size: 31px; }
-
-.ion-32 {
-  font-size: 32px; }
-
-.ion-33 {
-  font-size: 33px; }
-
-.ion-34 {
-  font-size: 34px; }
-
-.ion-35 {
-  font-size: 35px; }
-
-.ion-36 {
-  font-size: 36px; }
-
-.ion-37 {
-  font-size: 37px; }
-
-.ion-38 {
-  font-size: 38px; }
-
-.ion-39 {
-  font-size: 39px; }
-
-.ion-40 {
-  font-size: 40px; }
-
-.ion-41 {
-  font-size: 41px; }
-
-.ion-42 {
-  font-size: 42px; }
-
-.ion-43 {
-  font-size: 43px; }
-
-.ion-44 {
-  font-size: 44px; }
-
-.ion-45 {
-  font-size: 45px; }
-
-.ion-46 {
-  font-size: 46px; }
-
-.ion-47 {
-  font-size: 47px; }
-
-.ion-48 {
-  font-size: 48px; }
-
-.ion-49 {
-  font-size: 49px; }
-
-.ion-50 {
-  font-size: 50px; }
-
-.blue {
-  color: #3498db; }
-
-.red {
-  color: #e74c3c; }
-
-.yellow {
-  color: #f1c40f; }
-
-.teal {
-  color: #2ecc71; }
-
-.purple {
-  color: #9b59b6; }
-
-.green {
-  color: #2ecc71; }
-
-.turquoise {
-  color: #1abc9c; }
-
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -295,8 +181,12 @@ th {
 /*COMMON CSS*/
 body {
   position: relative;
-  font: normal 14px/1.618em 'Segoe UI', Lato, Tahoma, Geneva, Verdana, sans-serif;
-  background: #000000; }
+  background: linear-gradient(135deg, #6ec575 0, #3b8686 100%);
+  font: normal 14px/1.618em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+.wrapper {
+  width: 100vw;
+  height: 100vh; }
 
 .heading {
   font-weight: 500;
@@ -372,11 +262,126 @@ a {
       color: red;
       width: 24px;
       height: 24px;
+      padding: 6px;
       position: relative;
-      overflow: hidden;
+      overflow: hidden !important;
       border-radius: 50%; }
 
 /*ANIMATION*/
+.ion-20 {
+  font-size: 20px; }
+
+.ion-21 {
+  font-size: 21px; }
+
+.ion-22 {
+  font-size: 22px; }
+
+.ion-23 {
+  font-size: 23px; }
+
+.ion-24 {
+  font-size: 24px; }
+
+.ion-25 {
+  font-size: 25px; }
+
+.ion-26 {
+  font-size: 26px; }
+
+.ion-27 {
+  font-size: 27px; }
+
+.ion-28 {
+  font-size: 28px; }
+
+.ion-29 {
+  font-size: 29px; }
+
+.ion-30 {
+  font-size: 30px; }
+
+.ion-31 {
+  font-size: 31px; }
+
+.ion-32 {
+  font-size: 32px; }
+
+.ion-33 {
+  font-size: 33px; }
+
+.ion-34 {
+  font-size: 34px; }
+
+.ion-35 {
+  font-size: 35px; }
+
+.ion-36 {
+  font-size: 36px; }
+
+.ion-37 {
+  font-size: 37px; }
+
+.ion-38 {
+  font-size: 38px; }
+
+.ion-39 {
+  font-size: 39px; }
+
+.ion-40 {
+  font-size: 40px; }
+
+.ion-41 {
+  font-size: 41px; }
+
+.ion-42 {
+  font-size: 42px; }
+
+.ion-43 {
+  font-size: 43px; }
+
+.ion-44 {
+  font-size: 44px; }
+
+.ion-45 {
+  font-size: 45px; }
+
+.ion-46 {
+  font-size: 46px; }
+
+.ion-47 {
+  font-size: 47px; }
+
+.ion-48 {
+  font-size: 48px; }
+
+.ion-49 {
+  font-size: 49px; }
+
+.ion-50 {
+  font-size: 50px; }
+
+.blue {
+  color: #3498db; }
+
+.red {
+  color: #e74c3c; }
+
+.yellow {
+  color: #f1c40f; }
+
+.teal {
+  color: #2ecc71; }
+
+.purple {
+  color: #9b59b6; }
+
+.green {
+  color: #2ecc71; }
+
+.turquoise {
+  color: #1abc9c; }
+
 .element-invisible {
   border: 0;
   clip: rect(0 0 0 0);
@@ -438,6 +443,18 @@ a {
   border-radius: 5px;
   font-weight: bold; }
 
+.btn:hover {
+  background: #d62c1a; }
+
+.btn:active {
+  background: #bf2718; }
+
+a.btn {
+  color: #fff; }
+
+a.btn:hover {
+  color: #fff; }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -445,6 +462,14 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit; }
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  background: #FAFAFA;
+  height: 100%;
+  position: relative; }
 
 a {
   color: #e74c3c;
@@ -469,7 +494,7 @@ p {
 .browser-wrap {
   position: relative;
   width: 100%;
-  background: linear-gradient(135deg, #6ec575 0, #3b8686 100%); }
+  background-image: radial-gradient(circle farthest-corner at center, #3c4b57 0%, #1c262b 100%); }
 
 .browser {
   display: inline-block;
@@ -597,21 +622,19 @@ p {
   position: relative;
   top: 50%;
   color: #e74c3c;
-  -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%); }
 
 .more {
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  color: #000000;
+  color: #666;
   font-weight: bold;
   text-transform: uppercase;
   white-space: nowrap;
@@ -621,7 +644,7 @@ p {
   position: relative;
   top: -1px;
   margin-right: 5px;
-  color: #000000;
+  color: #999;
   vertical-align: middle; }
 
 .load {
@@ -634,23 +657,19 @@ p {
   max-width: 500px;
   color: #fff;
   text-align: center;
-  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%); }
 
 .load .quote {
   margin-top: 1em;
   font-size: 23px;
   font-weight: lighter;
-  color: #FFFFFF;
-  line-height: 28px; }
+  color: #ccc; }
 
 .text {
   position: absolute;
@@ -658,11 +677,10 @@ p {
   bottom: 0;
   margin-top: -150px;
   width: 100%;
-  color: #FFFFFF;
+  color: #999;
   text-align: center;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 18px; }
+  font-weight: bold; }
 
 .aboutText {
   margin-top: -200px; }

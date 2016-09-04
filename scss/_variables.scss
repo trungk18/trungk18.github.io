@@ -6,8 +6,38 @@ $community-bg-color: linear-gradient(135deg,#ffae95 0,#f67385 100%);
 $white-color: #FFFFFF;
 $black-color: #000000;
 $light-red-color: #FF5722;
-$gutter: 1em;
-$num-of-card-desktop: 5;
-$num-of-card-tablet: 3;
-$num-of-card-mobile: 2;
-$card-flip-duration: 1s;
+
+@for $i from 20 through 50 {
+    .ion-#{$i} {
+        font-size: $i + px;
+    }
+}
+
+
+.blue {
+    color: #3498db;
+}
+
+.red {
+    color: #e74c3c;
+}
+
+.yellow {
+    color: #f1c40f;
+}
+
+.teal {
+    color: #2ecc71;
+}
+
+.purple {
+    color: #9b59b6;
+}
+
+.green {
+    color: #2ecc71;
+}
+
+.turquoise {
+    color: #1abc9c;
+}

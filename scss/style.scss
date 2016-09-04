@@ -1,0 +1,433 @@
+﻿@import "bourbon/bourbon";
+@import 'variables';
+@import 'normalize';
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+/*COMMON CSS*/
+body {
+    position: relative;
+    font: normal 14px/1.618em 'Segoe UI', Lato, Tahoma, Geneva, Verdana, sans-serif;
+    background: $black-color;    
+}
+
+.heading {
+    font-weight: 500;
+    margin: 0px 0px 5px 0px;
+}
+
+p {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.profile-card {
+    position: absolute;
+    max-width: 300px;
+    width: 100%;
+    //centering
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+    @include transform(translateY(-50%));
+}
+
+.profile-summary {
+    width: auto;
+    height: auto;
+    padding: 20px 20px 0;
+    display: block;
+
+    a {
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        margin: 25px 30px;
+
+        > img {
+            width: 120px;
+            max-width: 100%;
+            border-radius: 50%;
+            box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+            @include transition(box-shadow 0.3s ease);
+        }
+
+        &:hover > img {
+            box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .profile-nickname {
+        color: #FF5722;
+        font-weight: 500;
+        margin: 0px 0px 5px 0px;
+    }
+}
+
+.profile-bio {
+    width: auto;
+    height: auto;
+    padding: 15px 20px 20px;
+    display: block;
+    color: #333333;
+}
+
+.profile-social-links {
+    padding: 0 20px 15px;
+
+    li {
+        list-style: none;
+        margin: -5px 0px 0px 0px;
+        padding: 0px;
+        float: left;
+        width: 20%;
+        text-align: center;
+
+        a {
+            display: inline-block;
+            color: red;
+            width: 24px;
+            height: 24px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+/*ANIMATION*/
+.element-invisible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.element-invisible.element-focusable:active,
+.element-invisible.element-focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.animate {
+    transition: all 0.2s ease;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tac {
+    text-align: center;
+}
+
+.hide-text {
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.spin:before {
+    animation: spin 3s linear 0s infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 1em 1.5em;
+    background: #e74c3c;
+    text-transform: uppercase;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #bf2718;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+a, input {
+    transition: all 0.2s ease;
+}
+
+a:active, a:focus, input:active, input:focus, button:active, button:focus, textarea:active, textarea:focus, select:active, select:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+p {
+    line-height: 1.7;
+}
+
+.browser-wrap {
+    position: relative;
+    width: 100%;
+    background: $profile-bg-color;
+}
+
+.browser {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #eee;
+    max-width: 550px;
+    max-height: 300px;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(34, 34, 34, 0.5);
+}
+
+.browser .icon {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.browser .icon span {
+    display: table-cell;
+    vertical-align: middle;
+    color: #666;
+}
+
+.browser .header, .browser .body {
+    padding: 0.5em 1em;
+}
+
+.browser .header {
+    background: #ccc;
+    color: #999;
+}
+
+.browser .header .right {
+    float: right;
+}
+
+.browser .tablet {
+    text-align: center;
+    color: #999;
+    background: #ccc;
+    margin: 10px 10px 0;
+    height: 75%;
+    position: relative;
+}
+
+.browser .tablet span {
+    position: absolute;
+    bottom: -38px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.browser .phone {
+    background: #ccc;
+    margin: 10px 0;
+    height: 80%;
+}
+
+.aboutAni {
+    max-width: 250px;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    background: #eee;
+    z-index: 2;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(34, 34, 34, 0.5);
+}
+
+.design .head {
+    margin-bottom: 1em;
+    width: 100%;
+    height: 100px;
+    background: #ccc;
+}
+
+.design .box-contain {
+    margin: 0 auto;
+    width: 245px;
+    text-align: center;
+}
+
+.design .box {
+    display: inline-block;
+    margin: 5px 5px 5px;
+    width: 20%;
+    height: 50px;
+    background: #ccc;
+}
+
+.design .box-large {
+    width: 70%;
+    height: 60px;
+}
+
+.develop {
+    height: 100%;
+    background: #999;
+}
+
+.develop .sidebar {
+    width: 30%;
+    height: 100%;
+    float: left;
+    background: #eee;
+}
+
+.develop .codebar {
+    width: 70%;
+    height: 100%;
+    padding: 1em;
+    float: right;
+}
+
+.develop .line {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 7px;
+    background: #fff;
+}
+
+.heart {
+    text-align: center;
+    height: 100%;
+}
+
+.heart span {
+    display: inherit;
+    position: relative;
+    top: 50%;
+    color: #e74c3c;
+    @include transform(translateY(-50%));
+}
+
+.more {
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%));
+    color: $black-color;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.more span {
+    position: relative;
+    top: -1px;
+    margin-right: 5px;
+    color: $black-color;
+    vertical-align: middle;
+}
+
+.load {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: auto;
+    max-width: 500px;
+    color: #fff;
+    text-align: center;
+    @include transform-style(preserve-3d);
+    @include transform(translateY(-50%));
+}
+
+.load .quote {
+    margin-top: 1em;
+    font-size: 23px;
+    font-weight: lighter;
+    color: $white-color;
+    line-height: 28px;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    margin-top: -150px;
+    width: 100%;
+    color: $white-color;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.aboutText {
+    margin-top: -200px;
+}
+
+.aboutText div {
+    display: inline-block;
+}

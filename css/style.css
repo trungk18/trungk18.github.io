@@ -298,6 +298,20 @@ body {
   font: normal 14px/1.618em 'Segoe UI', Lato, Tahoma, Geneva, Verdana, sans-serif;
   background: #000000; }
 
+.profile-card, .client-wrapper, .aboutAni {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
 .heading {
   font-weight: 500;
   margin: 0px 0px 5px 0px; }
@@ -309,22 +323,15 @@ a {
   text-decoration: none; }
 
 .profile-card {
-  position: absolute;
   max-width: 300px;
-  width: 100%;
-  top: 50%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
   background: #FFFFFF;
   border-radius: 4px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23); }
+
+.client-wrapper > img {
+  margin: 0 auto;
+  display: block;
+  max-width: 350px; }
 
 .profile-summary {
   width: auto;
@@ -377,28 +384,6 @@ a {
       border-radius: 50%; }
 
 /*ANIMATION*/
-.element-invisible {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-.element-invisible.element-focusable:active,
-.element-invisible.element-focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto; }
-
-.animate {
-  transition: all 0.2s ease; }
-
 .clearfix {
   *zoom: 1; }
 
@@ -406,18 +391,6 @@ a {
   content: "";
   display: table;
   clear: both; }
-
-.tac {
-  text-align: center; }
-
-.hide-text {
-  display: block;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden; }
-
-.hidden {
-  display: none !important; }
 
 .spin:before {
   animation: spin 3s linear 0s infinite; }
@@ -486,124 +459,103 @@ p {
   overflow: hidden;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(34, 34, 34, 0.5); }
-
-.browser .icon {
-  display: table;
-  width: 100%;
-  height: 100%;
-  text-align: center; }
-
-.browser .icon span {
-  display: table-cell;
-  vertical-align: middle;
-  color: #666; }
-
-.browser .header, .browser .body {
-  padding: 0.5em 1em; }
-
-.browser .header {
-  background: #ccc;
-  color: #999; }
-
-.browser .header .right {
-  float: right; }
-
-.browser .tablet {
-  text-align: center;
-  color: #999;
-  background: #ccc;
-  margin: 10px 10px 0;
-  height: 75%;
-  position: relative; }
-
-.browser .tablet span {
-  position: absolute;
-  bottom: -38px;
-  left: 0;
-  right: 0;
-  text-align: center; }
-
-.browser .phone {
-  background: #ccc;
-  margin: 10px 0;
-  height: 80%; }
+  .browser .icon {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+    .browser .icon span {
+      display: table-cell;
+      vertical-align: middle;
+      color: #666; }
+  .browser .header {
+    background: #ccc;
+    color: #999; }
+    .browser .header .right {
+      float: right; }
+  .browser .tablet {
+    text-align: center;
+    color: #999;
+    background: #ccc;
+    margin: 10px 10px 0;
+    height: 75%;
+    position: relative; }
+    .browser .tablet span {
+      position: absolute;
+      bottom: -38px;
+      left: 0;
+      right: 0;
+      text-align: center; }
+  .browser .phone {
+    background: #ccc;
+    margin: 10px 0;
+    height: 80%; }
+  .browser .body, .browser .header {
+    padding: 0.5em 1em; }
 
 .aboutAni {
   max-width: 250px;
   width: 100%;
   height: 300px;
-  position: absolute;
-  margin: auto;
-  top: 50%;
-  left: 0;
-  right: 0;
   overflow: hidden;
   background: #eee;
   z-index: 2;
-  transform: translateY(-50%);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(34, 34, 34, 0.5); }
 
-.design .head {
+.html-css .head {
   margin-bottom: 1em;
   width: 100%;
   height: 100px;
   background: #ccc; }
-
-.design .box-contain {
+.html-css .box-contain {
   margin: 0 auto;
   width: 245px;
   text-align: center; }
-
-.design .box {
+.html-css .box {
   display: inline-block;
   margin: 5px 5px 5px;
   width: 20%;
   height: 50px;
   background: #ccc; }
-
-.design .box-large {
+.html-css .box-large {
   width: 70%;
   height: 60px; }
 
-.develop {
+.javascript {
   height: 100%;
   background: #999; }
-
-.develop .sidebar {
-  width: 30%;
-  height: 100%;
-  float: left;
-  background: #eee; }
-
-.develop .codebar {
-  width: 70%;
-  height: 100%;
-  padding: 1em;
-  float: right; }
-
-.develop .line {
-  margin-bottom: 15px;
-  width: 100%;
-  height: 7px;
-  background: #fff; }
+  .javascript .sidebar {
+    width: 30%;
+    height: 100%;
+    float: left;
+    background: #eee; }
+  .javascript .codebar {
+    width: 70%;
+    height: 100%;
+    padding: 1em;
+    float: right; }
+  .javascript .line {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 7px;
+    background: #fff; }
 
 .heart {
   text-align: center;
   height: 100%; }
+  .heart span {
+    display: inherit;
+    position: relative;
+    top: 50%;
+    color: #e74c3c;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
 
-.heart span {
-  display: inherit;
-  position: relative;
-  top: 50%;
-  color: #e74c3c;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%); }
-
-.more {
+.more, .more-2 {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -616,13 +568,12 @@ p {
   text-transform: uppercase;
   white-space: nowrap;
   text-align: center; }
-
-.more span {
-  position: relative;
-  top: -1px;
-  margin-right: 5px;
-  color: #000000;
-  vertical-align: middle; }
+  .more span, .more-2 span {
+    position: relative;
+    top: -1px;
+    margin-right: 5px;
+    color: #000000;
+    vertical-align: middle; }
 
 .load {
   z-index: 1;
@@ -644,13 +595,12 @@ p {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%); }
-
-.load .quote {
-  margin-top: 1em;
-  font-size: 23px;
-  font-weight: lighter;
-  color: #FFFFFF;
-  line-height: 28px; }
+  .load .quote {
+    margin-top: 1em;
+    font-size: 23px;
+    font-weight: lighter;
+    color: #FFFFFF;
+    line-height: 28px; }
 
 .text {
   position: absolute;
@@ -664,8 +614,11 @@ p {
   font-weight: bold;
   font-size: 18px; }
 
-.aboutText {
+.aboutText, .client-text {
   margin-top: -200px; }
+
+.contact-me, .checkout-project-wrapper {
+  margin-top: -50px; }
 
 .aboutText div {
   display: inline-block; }

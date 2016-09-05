@@ -331,7 +331,7 @@ a {
 .client-wrapper > img {
   margin: 0 auto;
   display: block;
-  max-width: 350px; }
+  max-width: 360px; }
 
 .profile-summary {
   width: auto;
@@ -420,12 +420,15 @@ html {
   box-sizing: inherit; }
 
 a {
-  color: #e74c3c;
-  text-decoration: none; }
+  color: #3b8686;
+  background: #FFFFFF;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px; }
 
-a:hover {
-  color: #bf2718; }
-
+/*a:hover {
+  color: #bf2718;
+}*/
 a:hover, a:focus {
   text-decoration: none; }
 

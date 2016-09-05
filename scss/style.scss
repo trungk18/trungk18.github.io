@@ -49,7 +49,7 @@ a {
   > img {
     margin: 0 auto;
     display: block;
-    max-width: 350px;
+    max-width: 360px;
   }
 }
 
@@ -165,13 +165,16 @@ html {
 }
 
 a {
-  color: #e74c3c;
+  color: #3b8686;
+  background: $white-color;
+  padding: 10px 15px;
   text-decoration: none;
+  border-radius: 5px;
 }
 
-a:hover {
+/*a:hover {
   color: #bf2718;
-}
+}*/
 
 a:hover, a:focus {
   text-decoration: none;

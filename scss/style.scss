@@ -168,6 +168,8 @@ a.client-link {
   padding: 10px 15px;
   text-decoration: none;
   border-radius: 5px;
+  white-space: pre;
+  text-wrap: none;
   @include transform(scale(1));
   @include transition(all 0.2s);
 

@@ -423,6 +423,8 @@ a.client-link {
   padding: 10px 15px;
   text-decoration: none;
   border-radius: 5px;
+  white-space: pre;
+  text-wrap: none;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);

@@ -6,7 +6,7 @@ $community-bg-color: linear-gradient(135deg,#ffae95 0,#f67385 100%);
 $white-color: #FFFFFF;
 $black-color: #000000;
 $light-red-color: #FF5722;
-
+$dark-green: #3b8686;
 @for $i from 20 through 50 {
     .ion-#{$i} {
         font-size: $i + px;

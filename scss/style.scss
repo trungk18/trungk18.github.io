@@ -1,6 +1,7 @@
 ﻿@import "bourbon/bourbon";
 @import 'variables';
 @import 'normalize';
+@import 'mobile';
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 /*COMMON CSS*/
@@ -163,18 +164,19 @@ html {
 }
 
 a.client-link {
-  color: #3b8686;
-  background: $white-color;
-  padding: 10px 15px;
+  color: $white-color;
+  background: lighten($dark-green, 5%);
+  border: 3px solid $white-color;
+  padding: 5px 10px;
   text-decoration: none;
   border-radius: 5px;
   white-space: pre;
   text-wrap: none;
-  @include transform(scale(1));
   @include transition(all 0.2s);
 
   &:hover {
-    @include transform(scale(1.1));
+    background: $white-color;
+    color: lighten($dark-green, 5%);
   }
 }
 

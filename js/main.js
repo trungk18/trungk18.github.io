@@ -142,10 +142,10 @@
     }, '-=.5')
     .fromTo('.text-screen', .3, {
       autoAlpha: 0,
-      y: '-10px'
+      y: '-40px'
     }, {
       autoAlpha: 1,
-      y: '0'
+      y: '-25px'
     }, '-=.5')
     .to('.icon', .3, {
       autoAlpha: 0,

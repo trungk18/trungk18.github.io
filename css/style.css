@@ -361,7 +361,7 @@ a {
 .profile-bio {
   width: auto;
   height: auto;
-  padding: 15px 20px 20px;
+  padding: 15px 20px 5px;
   display: block;
   color: #333333; }
 
@@ -377,8 +377,6 @@ a {
     .profile-social-links li a {
       display: inline-block;
       color: red;
-      width: 24px;
-      height: 24px;
       position: relative;
       overflow: hidden;
       border-radius: 50%; }
@@ -419,12 +417,26 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-a {
+a.client-link {
   color: #3b8686;
   background: #FFFFFF;
   padding: 10px 15px;
   text-decoration: none;
-  border-radius: 5px; }
+  border-radius: 5px;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s; }
+  a.client-link:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); }
 
 /*a:hover {
   color: #bf2718;

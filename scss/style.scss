@@ -88,7 +88,7 @@ a {
 .profile-bio {
   width: auto;
   height: auto;
-  padding: 15px 20px 20px;
+  padding: 15px 20px 5px;
   display: block;
   color: #333333;
 }
@@ -107,8 +107,6 @@ a {
     a {
       display: inline-block;
       color: red;
-      width: 24px;
-      height: 24px;
       position: relative;
       overflow: hidden;
       border-radius: 50%;
@@ -164,12 +162,18 @@ html {
   box-sizing: inherit;
 }
 
-a {
+a.client-link {
   color: #3b8686;
   background: $white-color;
   padding: 10px 15px;
   text-decoration: none;
   border-radius: 5px;
+  @include transform(scale(1));
+  @include transition(all 0.2s);
+
+  &:hover {
+    @include transform(scale(1.1));
+  }
 }
 
 /*a:hover {

@@ -22,7 +22,7 @@
     ease: Power2.easeOut
   });
 
-  var aboutAnimation = new TimelineMax({ repeat: false });
+  var aboutAnimation = new TimelineMax({ repeat: false, onUpdate: updateSlider, delay: 0.4 });
   aboutAnimation
     .to('.load', .5, {
       autoAlpha: 0,
@@ -388,9 +388,50 @@
       ease: Elastic.easeOut.config(1, 0.3)
     })
 
+  $("#progressSlider").slider({
+    range: false,
+    min: 0,
+    max: 1,
+    step: .001,
+    slide: function (event, ui) {
+      aboutAnimation.progress(ui.value).pause();
+    }
+  });
+
+  //playback
+  function updateSlider() {
+    $("#progressSlider").slider({ value: aboutAnimation.progress() });
+    $("#time").html(aboutAnimation.time().toFixed(2));
+    $("#progress").html(aboutAnimation.progress().toFixed(2))
+  }
+
+  var toPause = true;
+  $("#pauseBtn").on("click", function () {
+    var $this = $(this);
+    if (toPause) {
+      $this.html("Resume");
+      aboutAnimation.pause();
+    }
+    else {
+      $this.html("Pause");
+      aboutAnimation.resume();
+    }
+    toPause = !toPause;
+  });
+
+  $("#reverseBtn").on("click", function () {
+    aboutAnimation.reverse();
+  });
+
+  $("#restartBtn").on("click", function () {
+    aboutAnimation.restart();
+    $("#pauseBtn").html("Pause");
+    toPause = true;
+  });
+
+  //on resize
   $(window).resize(function () {
     $('.browser-height').height($(this).height());
   })
-  $(window).resize();
-
+  $(window).resize();  
 });

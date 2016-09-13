@@ -401,17 +401,6 @@ a {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
-.btn {
-  display: inline-block;
-  text-align: center;
-  padding: 1em 1.5em;
-  background: #e74c3c;
-  text-transform: uppercase;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  font-weight: bold; }
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -635,5 +624,30 @@ p {
 
 .aboutText div {
   display: inline-block; }
+
+/*PLAYBACK CONTROL*/
+.playback-control {
+  position: fixed;
+  left: 50%;
+  bottom: 1em;
+  max-width: 20em;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+#progressSlider {
+  margin-bottom: 15px; }
+
+.sliderValues {
+  margin: 10px; }
+
+.playback {
+  margin: 0 5px;
+  font-size: 12px;
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

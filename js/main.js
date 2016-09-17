@@ -398,37 +398,6 @@
     }
   });
 
-  //playback
-  function updateSlider() {
-    $("#progressSlider").slider({ value: aboutAnimation.progress() });
-    $("#time").html(aboutAnimation.time().toFixed(2));
-    $("#progress").html(aboutAnimation.progress().toFixed(2))
-  }
-
-  var toPause = true;
-  $("#pauseBtn").on("click", function () {
-    var $this = $(this);
-    if (toPause) {
-      $this.html("Resume");
-      aboutAnimation.pause();
-    }
-    else {
-      $this.html("Pause");
-      aboutAnimation.resume();
-    }
-    toPause = !toPause;
-  });
-
-  $("#reverseBtn").on("click", function () {
-    aboutAnimation.reverse();
-  });
-
-  $("#restartBtn").on("click", function () {
-    aboutAnimation.restart();
-    $("#pauseBtn").html("Pause");
-    toPause = true;
-  });
-
   //on resize
   $(window).resize(function () {
     $('.browser-height').height($(this).height());

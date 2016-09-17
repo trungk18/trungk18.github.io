@@ -22,7 +22,7 @@
     ease: Power2.easeOut
   });
 
-  var aboutAnimation = new TimelineMax({ repeat: false, onUpdate: updateSlider, delay: 0.4 });
+  var aboutAnimation = new TimelineMax({ repeat: false, delay: 0.4 });
   aboutAnimation
     .to('.load', .5, {
       autoAlpha: 0,
@@ -387,16 +387,6 @@
       scaleX: 1,
       ease: Elastic.easeOut.config(1, 0.3)
     })
-
-  $("#progressSlider").slider({
-    range: false,
-    min: 0,
-    max: 1,
-    step: .001,
-    slide: function (event, ui) {
-      aboutAnimation.progress(ui.value).pause();
-    }
-  });
 
   //on resize
   $(window).resize(function () {

@@ -42,7 +42,7 @@
     })
     .from('.text-html-css', .3, {
       autoAlpha: 0,
-      y: '-20px',
+      y: '-40px',
       ease: Power3.easeOut
     })
     .from('.head', .5, {

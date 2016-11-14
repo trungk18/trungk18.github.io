@@ -13,7 +13,7 @@
     "Be cautious, you are entering my world of Front-end.",
   ];
 
-  $('.quote').html(quotes[2]);
+  $('.quote').html(quotes[Math.floor(Math.random() * quotes.length)]);
   TweenLite.fromTo('.quote', .7, {
     alpha: 0,
     y: '-20px'

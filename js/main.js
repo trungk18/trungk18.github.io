@@ -3,7 +3,8 @@
 
   var quotes = [
     "Believe in yourself.<br> I don't want to be the only one who does.",
-    "Looking for your full potential?<br> I'm good at hide and seek",
+    "Looking for your full potential?<br> I'm good at hiding and seek",
+    "Looking for a Front-end developer in Singapore. <br> Or who can work remote all over the world?",
     "Become a genius. I don't mind if your evil",
     "Challenge yourself.. And others.<br> It's good for everyone",
     "Emotions are valuable. Don't throw them.",
@@ -12,7 +13,7 @@
     "Be cautious, you are entering my world of Front-end.",
   ];
 
-  $('.quote').html(quotes[Math.floor(Math.random() * quotes.length)]);
+  $('.quote').html(quotes[2]);
   TweenLite.fromTo('.quote', .7, {
     alpha: 0,
     y: '-20px'

@@ -1,6 +1,6 @@
 ##[Vo Tuan Trung](http://trungk18.github.io/)
 
-###Front-end Developer - .NET/SharePoint Developer
+###Front-end/.NET Developer
 
 This is my personal portfolio written with **HTML5, CSS3, jQuery and [TweenLite](https://greensock.com/docs/#/HTML5/GSAP/TweenLite/fromTo/)**.
 
@@ -12,10 +12,10 @@ What I *can* help you with:
 - Front-end development: Working with UI/UX designers to convert designs into responsive, performant and standards-compliant websites, using **HTML5, CSS and JavaScript**.
     * Responsive Design and grid frameworks (**Bootstrap** and **Foundation**).
     * CSS pre-processor including **LESS** and **SASS**.
-    * JavaScript MVC / MVW frameworks - **AngularJS**.
-    * **RequireJS** for file and module loader.
-    * **Bower** for dependency management.
-    * **Gulp.js** JavaScript task runners.
+    * JavaScript MVC / MVW frameworks - **AngularJS 1 & 2**.
+    * **RequireJS/SystemJS/Webpack** for file and module loader.
+    * **Bower/NPM** for dependency management.
+    * **Gulp.js/Grunt** JavaScript task runners.
     *Consumption of RESTful web APIs or web services.
 - Adding **interactions** and **animations** to existing websites/application interfaces.
 - Back-end development with .NET technology such as **ASP.NET MVC5, SharePoint 2013**.
@@ -24,3 +24,9 @@ What I *can* help you with:
 What I *can’t* help you with:
 - Designing a user interface for your website or app. I am not a **designer**.
 - I don’t create design mockups, wireframes or static design deliverables of that sort.
+
+Find me around the internet.
+- [Codepen](http://codepen.io/trungk18/)
+- [Github](https://github.com/trungk18)
+- [Linkedin](https://www.linkedin.com/in/trungk18)
+- [StackOverFlow](http://stackoverflow.com/users/3375906/trungk18?tab=profile)

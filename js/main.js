@@ -11,6 +11,8 @@
     "Stop being negative.<br> You're literally bringing the world down",
     "Be cautious, you are entering my territory.",
     "Be cautious, you are entering my world of Front-end.",
+    "I'm 24, young and passionate. Addicted to Front-end.",
+    "Looking for AngularJS developer, let's find out If I am the best fit."
   ];
 
   $('.quote').html(quotes[Math.floor(Math.random() * quotes.length)]);

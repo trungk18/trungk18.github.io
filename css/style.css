@@ -407,11 +407,13 @@ a {
     -webkit-transform: rotate(0deg); }
   to {
     -webkit-transform: rotate(360deg); } }
+
 @-moz-keyframes spin {
   from {
     -moz-transform: rotate(0deg); }
   to {
     -moz-transform: rotate(360deg); } }
+
 @keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -741,11 +743,13 @@ p {
     -webkit-transform: translateY(0); }
   100% {
     -webkit-transform: translateY(-1500px) rotate(600deg); } }
+
 @-moz-keyframes square {
   0% {
     -moz-transform: translateY(0); }
   100% {
     -moz-transform: translateY(-1500px) rotate(600deg); } }
+
 @keyframes square {
   0% {
     -webkit-transform: translateY(0);

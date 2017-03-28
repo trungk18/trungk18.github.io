@@ -1,6 +1,6 @@
-##[Vo Tuan Trung](http://trungk18.github.io/)
+## [Trung Vo Tuan](http://trungk18.github.io/)
 
-###Front-end/.NET Developer
+### Front-end Developer
 
 This is my personal portfolio written with **HTML5, CSS3, jQuery and [TweenLite](https://greensock.com/docs/#/HTML5/GSAP/TweenLite/fromTo/)**.
 

@@ -1,10 +1,10 @@
-# Logs
-logs
-*.log
+_site
+.DS_Store
+.jekyll
+.jekyll-metadata
+.bundle
 .sass-cache
-
-#Bourbon
-bourbon
-
-# Dependency directories
+Gemfile
+Gemfile.lock
 node_modules
+package.json

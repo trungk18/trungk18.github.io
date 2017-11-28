@@ -9,10 +9,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "It's a site title"
+title                    : "Wanderlust"
 title_separator          : "|"
-name                     : "Trung Vo|Frontend Developer"
-description              : "Trung Vo|trungk18|Frontend Developer|Young and passionate, addicted to Front-end. Working with jQuery, Angular 1 & 2, ReactJS. Like photography, running, cooking and reading book."
+name                     : "Trung Vo"
+description              : "Trung Vo - Frontend Developer. Young and passionate, addicted to Front-end. Working with jQuery, Angular 1 & 2, ReactJS. Like photography, running, cooking and reading book. trungk18"
 url                      : "http://trungk18.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "trungk18/trungk18.github.io"
@@ -75,9 +75,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "UA-80363801-1"
 
 
 # Site Author

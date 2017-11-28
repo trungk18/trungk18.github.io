@@ -9,10 +9,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "Site Title"
-title_separator          : "-"
-name                     : "Trung Vo - Frontend Developer"
-description              : "Young and passionate, addicted to Front-end. Working with jQuery, Angular 1 & 2, ReactJS. Like photography, running, cooking and reading book."
+title                    : "It's a site title'"
+title_separator          : "|"
+name                     : "Trung Vo|Frontend Developer"
+description              : "Trung Vo|trungk18|Frontend Developer|Young and passionate, addicted to Front-end. Working with jQuery, Angular 1 & 2, ReactJS. Like photography, running, cooking and reading book."
 url                      : "http://trungk18.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "trungk18/trungk18.github.io"
@@ -84,7 +84,7 @@ analytics:
 author:
   name             : "Trung Vo"
   avatar           : "/assets/images/profile.png"
-  bio              : "Young and passionate, addicted to Front-end. Working with jQuery, Angular 1 & 2, ReactJS. Like photography, running, cooking and reading book."
+  bio              : "Just another front end guy "
   location         : "Singapore"
   email            :
   uri              :
@@ -92,7 +92,7 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : "trungk18"
   foursquare       :
   github           :
   gitlab           :
@@ -100,7 +100,7 @@ author:
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : "trungk18"
   pinterest        :
   soundcloud       :
   stackoverflow    : "3375906/trungk18"

@@ -9,11 +9,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "It's a site title'"
+title                    : "It's a site title"
 title_separator          : "|"
 name                     : "Trung Vo|Frontend Developer"
 description              : "Trung Vo|trungk18|Frontend Developer|Young and passionate, addicted to Front-end. Working with jQuery, Angular 1 & 2, ReactJS. Like photography, running, cooking and reading book."
-url                      : "http://trungk18.github.io/"
+url                      : "http://trungk18.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "trungk18/trungk18.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"

@@ -65,7 +65,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : /assets/images/site-logo.png
+og_image                 : /img/trungk18.png
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -83,7 +83,7 @@ analytics:
 # Site Author
 author:
   name             : "Trung Vo"
-  avatar           : "/assets/images/profile.png"
+  avatar           : "/img/profile.png"
   bio              : "Just another front end guy "
   location         : "Singapore"
   email            :

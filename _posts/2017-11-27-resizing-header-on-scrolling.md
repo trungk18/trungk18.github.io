@@ -2,10 +2,11 @@
 title: "Shrinking navigation bar when scrolling with CSS and jQuery"
 categories: css tutorial jquery
 ---
-- [**Github**](https://github.com/trungk18/Resizing-Header-On-Scroll)
-- [**Demo**](http://trungk18.github.io/Resizing-Header-On-Scroll)
 
 In this tutorial, I will show you how to create an animated fixed navigation that will resize on scroll and when you scroll down the page a bit, the header resizes smaller, and gets back bigger when you scroll back to the top with just simple CSS3 animation and jQuery.
+
+- [Demo](http://trungk18.github.io/Resizing-Header-On-Scroll)
+- [Github](https://github.com/trungk18/Resizing-Header-On-Scroll)
 
 ### Sticky Navigation
 
@@ -119,7 +120,7 @@ Finally, I added some example media queries so that our animated resizing naviga
     }
 ```
 
-#### jQuery code
+### jQuery code
 
 To make it happen, I am going to use jQuery to add and remove the class *navbar-shrink* when we scroll a certain amount (in this situation is 50px). Adding and removing this class will animate the navbar.
 

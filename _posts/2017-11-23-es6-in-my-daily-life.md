@@ -1,4 +1,9 @@
-﻿ES2015/ES6 has been around for more than two years with all the exciting feature and syntax. After working with TypeScript and Angular 2 in a project for more than a year, there are few part and features that I often apply in my code.
+﻿---
+title: "ES6 in my daily life"
+categories: javascript es6 es2015
+---
+
+ES2015/ES6 has been around for more than two years with all the exciting feature and syntax. After working with TypeScript and Angular 2 in a project for more than a year, there are few part and features that I often apply in my code.
 
 ### [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 

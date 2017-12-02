@@ -18,7 +18,7 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "trungk18/trungk18.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+words_per_minute         : 100
 comments:
   provider               : "facebook" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
@@ -63,8 +63,8 @@ twitter:
   username               :
 facebook:
   username               :
-  app_id                 :
-  publisher              : "149263715711638"
+  app_id                 : "149263715711638"
+  publisher              : 
 og_image                 : /img/trungk18.png
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles

@@ -77,7 +77,67 @@ var arr2 = [3, 4, 5];
 arr1 = [...arr1, ...arr2];
 ```
 
-#### To learn ES6
+### My useful tips collection :)
+#### 1. Swap variable
+Using array destructive syntax
+```javascript
+let a = 'world', b = 'hello'
+[a, b] = [b, a]
+console.log(a) // -> hello
+console.log(b) // -> world
+```
+
+#### 2. Concat/merge array
+I often use spread operator to extract array value instead of concat function.
+
+```javascript
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const arr3 = [7, 8, 9];
+
+//old es5 way
+const result = arr1.concat(arr2, arr3);
+
+//another old es5 way 
+const result = [].concat(arr1, arr2, arr3);
+
+//new es6 way
+const result = [...arr1, ...arr2, ...arr3];
+```
+
+#### 3. Default variable with ||
+You will find it sometimes very very helpful.
+```javascript
+//old es5 way
+function doSomething(options){
+    options = options || {};
+}
+
+//new es6 way
+function doSomething(options= {}){
+    //todo
+}
+```
+
+#### 4. Time testing
+Ever wonder what’s faster: Looping with an i++ or looping with an i-- ? Just use [console's timing](https://developer.mozilla.org/en-US/docs/Web/API/console#Timers) method to test
+
+```javascript
+var a = ["a", "b", "c", "d", "e", "f", "g", "h", "i"];
+console.time('testing with i++');
+for (var i = 0; i < a.length; i++){
+}
+console.timeEnd('testing with i++'); //testing with i++: 0.010009765625ms
+
+
+console.time('testing_backwards');
+for (var i = a.length - 1; i >= 0; i--){
+}
+console.timeEnd('testing_backwards'); //testing_backwards: 0.0107421875ms
+```
+
+
+### To learn ES6
 - [https://babeljs.io/learn-es2015/](https://babeljs.io/learn-es2015/)
 - [http://exploringjs.com/es6/](http://exploringjs.com/es6/)
 

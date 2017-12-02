@@ -9,10 +9,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "Wanderlust"
+title                    : "JavasScript and more"
 title_separator          : "|"
 name                     : "Trung Vo"
-description              : "Trung Vo - Frontend Developer. Young and passionate, addicted to Front-end. Working with jQuery, Angular 1 & 2, ReactJS. Like photography, running, cooking and reading book. trungk18"
+description              : "Trung Vo - Frontend Developer. Young and passionate, addicted to Front-end. Working with jQuery, AngularJS, Angular, ReactJS. Like photography, running, cooking and reading book. trungk18"
 url                      : "http://trungk18.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "trungk18/trungk18.github.io"
@@ -89,17 +89,17 @@ author:
   email            :
   uri              :
   bitbucket        :
-  codepen          :
+  codepen          : "trungk18"
   dribbble         :
-  flickr           :
+  flickr           : "trungk18"
   facebook         : "trungk18"
   foursquare       :
   github           :
-  gitlab           :
+  gitlab           : "trungk18"
   google_plus      :
   keybase          :
   instagram        :
-  lastfm           :
+  lastfm           : "trungk18"
   linkedin         : "trungk18"
   pinterest        :
   soundcloud       :

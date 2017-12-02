@@ -114,7 +114,7 @@ function doSomething(options){
 }
 
 //new es6 way
-function doSomething(options= {}){
+function doSomething(options = {}){
     //todo
 }
 ```
@@ -130,10 +130,10 @@ for (var i = 0; i < a.length; i++){
 console.timeEnd('testing with i++'); //testing with i++: 0.010009765625ms
 
 
-console.time('testing_backwards');
+console.time('testing with i--');
 for (var i = a.length - 1; i >= 0; i--){
 }
-console.timeEnd('testing_backwards'); //testing_backwards: 0.0107421875ms
+console.timeEnd('testing with i--'); //testing with i--: 0.0107421875ms
 ```
 
 

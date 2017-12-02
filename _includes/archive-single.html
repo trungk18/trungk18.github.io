@@ -31,10 +31,10 @@
       {% endif %}
     </h2>
     <p class="page__meta">
-      {% if page.last_modified_at %}
-        <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: "%B %d, %Y" }}</time> -
-      {% elsif page.date %}
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time> -
+      {% if post.last_modified_at %}
+        <time datetime="{{ post.last_modified_at | date: "%Y-%m-%d" }}">{{ post.last_modified_at | date: "%B %d, %Y" }}</time> -
+      {% elsif post.date %}
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time> -
       {% endif %}
       
       {% if post.read_time %}

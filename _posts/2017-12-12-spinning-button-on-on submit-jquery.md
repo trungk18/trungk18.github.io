@@ -1,6 +1,6 @@
 ---
 title: "Spinning button onSubmit form with jQuery and ASP.NET MVC"
-categories: javascript jquery
+categories: javascript jquery mvc
 ---
 
 ### TL;DR: See the demo

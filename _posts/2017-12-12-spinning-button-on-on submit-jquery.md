@@ -3,7 +3,12 @@ title: "Spinning button onSubmit form with jQuery and ASP.NET MVC"
 categories: javascript jquery
 ---
 
-In Zyllem, we are leveraging ASP.NET MVC 5 to build our product. So basically, almost 80% of our code base and UI stuff is doing as server side. Which mean that every time we interact with the UI, the server will proceed and return the whole view and browser starts rendering it again. 20% of the code is the client-side app written in JavaScript in AngularJS, and also TypeScript in Angular 2/4.
+### TL;DR: See the demo
+
+<p data-height="265" data-theme-id="0" data-slug-hash="MrWrNw" data-default-tab="js,result" data-user="trungk18" data-embed-version="2" data-pen-title="Spinning button onSubmit form with jQuery" class="codepen">See the Pen <a href="https://codepen.io/trungk18/pen/MrWrNw/">Spinning button onSubmit form with jQuery</a> by Vo Tuan Trung (<a href="https://codepen.io/trungk18">@trungk18</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script src="https://production-assets.codepen.io/assets/embed/ei.js"> </script>
+
+In Zyllem, we are leveraging ASP.NET MVC 5 to build our product. So basically, almost 80% of our code base and UI stuff is doing as server side. 20% of the code is the client-side app written in JavaScript in AngularJS, and also TypeScript in Angular 2/4.
 
 There is a traditional UX issue is when we submit the form, sometimes the server takes a long time to respond to the client so that the page stays the same. Most of the time, what we do is to try to click the submit button again, and again. In few last sprint, my boss and I introduced the spinner button.
 

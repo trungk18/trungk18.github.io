@@ -14,6 +14,8 @@ categories: javascript myexperience
 - The meaningless name should be avoided as well, such as `foo`, `bar`.
 - To define a constant variable, remember to use all uppercase letters with underscores separating words.
 
+------
+
 I have been working with C# and JavaScript for the past few years and came to realize that each language seems to have its own set of naming conventions. I'd like to share with you some naming conventions for JavaScript that I personally prefer.
 
 Most of the code you write involves variables and functions, so determining the naming for those is very important to a comprehensive code. JavaScript's core, ECMAScript, is written using a convention called **_camel case_**. Basically, its name begins with a lower case letter and each sub-sequent word begins with an uppercase letter. E.g

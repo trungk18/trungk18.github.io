@@ -59,7 +59,7 @@ Let's now take a look at our HTML markup. The markup consists of a header with a
 
 I am using navbar-default from bootstrap with navbar-fixed-top to make it stick to the top of webpage. The HTML is fairly straightforward. 
 
-### Now take a look at CSS.
+### Now take a look at CSS
 
 Class .navbar-default was set the padding top and down for 30px each, and the transition is based on padding. When the navbar gets resized on scroll, I shrink the value to 10px by adding child class navbar-shrink.
 Finally, I added some example media queries so that our animated resizing navigation will work only in medium devices desktops [Bootstrap standard grid](http://getbootstrap.com/css/#grid). 

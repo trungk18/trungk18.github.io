@@ -85,6 +85,10 @@
 /*
    Author profile and links
    ========================================================================== */
+.author__link {
+  text-decoration: none;
+  color: #000;
+}
 
 .author__avatar {
   display: table-cell;

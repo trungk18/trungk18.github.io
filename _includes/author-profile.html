@@ -5,7 +5,7 @@
 {% endif %}
 
 <div itemscope itemtype="http://schema.org/Person">
-  <a href="{{ '/' | absolute_url }}">
+  <a href="{{ '/' | absolute_url }}" class="author__link">
     {% if author.avatar %}
       <div class="author__avatar">      
         {% if author.avatar contains "://" %}

@@ -9,8 +9,8 @@ Starting from the number 1 and repeatedly either adding 5 or multiply by 3, an i
 
 What came first to my mind is very obvious, recursive function. It doesn't find the shortest sequence of operation. It is satisfied when it finds a sequence.
 
-<p data-height="265" data-theme-id="0" data-slug-hash="baKamv" data-default-tab="js,result" data-user="trungk18" data-embed-version="2" data-pen-title="baKamv" class="codepen">See the Pen <a href="https://codepen.io/trungk18/pen/baKamv/">baKamv</a> by Vo Tuan Trung (<a href="https://codepen.io/trungk18">@trungk18</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"> </script>
+<p data-height="265" data-theme-id="0" data-slug-hash="baKamv" data-default-tab="js,result" data-user="trungk18" data-embed-version="2" data-pen-title="baKamv" class="codepen"> See the Pen <a href="https://codepen.io/trungk18/pen/baKamv/"> baKamv </a> by Vo Tuan Trung ( <a href="https://codepen.io/trungk18"> @trungk18 </a> ) on <a href="https://codepen.io"> CodePen </a> . </p>
+<script src="https://production-assets.codepen.io/assets/embed/ei.js"> </script>
 
 The inner function find does the actual recursing. It takes two arguments - the current number and a string that records how we reached this number. And return either a string or null.
 

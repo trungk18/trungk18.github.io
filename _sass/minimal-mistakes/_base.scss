@@ -120,11 +120,7 @@ a {
   &:active {
     color: $link-color-hover;
     outline: 0;
-  }
-
-  &:visited {
-    color: $link-color-visited;
-  }
+  } 
 }
 
 /* code */

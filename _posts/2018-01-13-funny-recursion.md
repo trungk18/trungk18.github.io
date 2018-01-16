@@ -9,8 +9,7 @@ Starting from the number 1 and repeatedly either adding 5 or multiply by 3, an i
 
 What came first to my mind is very obvious, recursive function. It doesn't find the shortest sequence of operation. It is satisfied when it finds a sequence.
 
-<p data-height="265" data-theme-id="0" data-slug-hash="baKamv" data-default-tab="js,result" data-user="trungk18" data-embed-version="2" data-pen-title="baKamv" class="codepen"> See the Pen <a href="https://codepen.io/trungk18/pen/baKamv/"> baKamv </a> by Vo Tuan Trung ( <a href="https://codepen.io/trungk18"> @trungk18 </a> ) on <a href="https://codepen.io"> CodePen </a> . </p>
-<script src="https://production-assets.codepen.io/assets/embed/ei.js"> </script>
+<iframe height='265' scrolling='no' title='Find sequence to produce a number by adding 5 or multiplying by 3' src='//codepen.io/trungk18/embed/baKamv/?height=265&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/trungk18/pen/baKamv/'>Find sequence to produce a number by adding 5 or multiplying by 3</a> by Vo Tuan Trung (<a href='https://codepen.io/trungk18'>@trungk18</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
 
 The inner function find does the actual recursing. It takes two arguments - the current number and a string that records how we reached this number. And return either a string or null.
 

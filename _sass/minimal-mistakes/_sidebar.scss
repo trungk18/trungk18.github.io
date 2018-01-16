@@ -86,6 +86,8 @@
    Author profile and links
    ========================================================================== */
 .author__link {
+  text-decoration: none;
+  color: #000;
   &:visited, &:focus, &:active, &:focus, &:hover{
     text-decoration: none;
     color: #000;

@@ -3,14 +3,11 @@ title: "Spinning button onSubmit form with jQuery and ASP.NET MVC"
 categories: javascript jquery mvc
 ---
 
-### TL;DR: See the demo
+In Zyllem, we are leveraging ASP.NET MVC 5 to build our product. So basically, almost 80% of our code base and UI stuff is doing as server side. 20% of the code is the client-side app written in JavaScript in AngularJS, and also TypeScript in Angular 2/4.
 
-<p data-height="265" data-theme-id="0" data-slug-hash="MrWrNw" data-default-tab="js,result" data-user="trungk18" data-embed-version="2" data-pen-title="Spinning button onSubmit form with jQuery" class="codepen">See the Pen <a href="https://codepen.io/trungk18/pen/MrWrNw/">Spinning button onSubmit form with jQuery</a> by Vo Tuan Trung (<a href="https://codepen.io/trungk18">@trungk18</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script src="https://production-assets.codepen.io/assets/embed/ei.js"> </script>
+<iframe height='265' scrolling='no' title='Spinning button onSubmit form with jQuery' src='//codepen.io/trungk18/embed/MrWrNw/?height=265&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/trungk18/pen/MrWrNw/'>Spinning button onSubmit form with jQuery</a> by Vo Tuan Trung (<a href='https://codepen.io/trungk18'>@trungk18</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
 
 ------
-
-In Zyllem, we are leveraging ASP.NET MVC 5 to build our product. So basically, almost 80% of our code base and UI stuff is doing as server side. 20% of the code is the client-side app written in JavaScript in AngularJS, and also TypeScript in Angular 2/4.
 
 There is a traditional UX issue is when we submit the form, sometimes the server takes a long time to respond to the client so that the page stays the same. Most of the time, what we do is to try to click the submit button again, and again. In few last sprint, my boss and I introduced the spinner button.
 

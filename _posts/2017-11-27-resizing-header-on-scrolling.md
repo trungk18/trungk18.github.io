@@ -1,5 +1,5 @@
 ---
-title: "Shrinking navigation bar when scrolling with CSS and jQuery"
+title: "Shrinking Navigation Bar When Scrolling Down - Bootstrap 3 Navigation & jQuery"
 categories: css tutorial jquery
 ---
 

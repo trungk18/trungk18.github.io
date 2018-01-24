@@ -1,6 +1,7 @@
 ---
 title: "JavaScript naming convention"
-categories: javascript myexperience
+categories: experience
+tags: javascript 
 ---
 
 > "There are only two hard things in Computer Science: cache invalidation and naming things" - Phil Karlton

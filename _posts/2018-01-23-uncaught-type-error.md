@@ -3,9 +3,9 @@ title: "Uncaught TypeError: Cannot read property 'name' of undefined"
 categories: javascript typescript angular
 ---
 
-![uncaught type error](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/uncaught-type-error.png)
+It is a very common error when working with object and array to get a `TypeError: Cannot read property 'name' of undefined`. This happens when we try to access a property of a value that is undefined or null in JavaScript.
 
-It is a very common error when working with object and array to get a `TypeError: Cannot read property 'name' of undefined`. This happens when we try to access a property of a value that is undefined or null in JavaScript. E.g
+![uncaught type error](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/uncaught-type-error.png)
 
 ```javascript
 var movie = {
@@ -66,7 +66,8 @@ let neededProperty = obj.prop1.deepProp.veryVeryDeepProp;
 let deepProperty =
   obj.prop1 && obj.prop1.deepProp.veryDeepProp.veryVeryDeepProp;
 //Uncaught TypeError: Cannot read property 'deepProp' of undefined.
-//Same error as above because prop1 is an object which will be coerced to true so that obj.prop1.deepProp.veryVeryDeepProp operand will evaluated and throw and error
+//Same error as above because prop1 is an object which will be coerced to true so that
+//obj.prop1.deepProp.veryVeryDeepProp operand will be evaluated and throw and error
 
 let safeProperty =
   obj.prop1 &&
@@ -92,7 +93,7 @@ But placing many try/catch blocks throughout your code just to access properties
 
 3. Helper function
 
-We will write simple helper function that does nothing else but calling a provided function in a try/catch block. With the support of [ES6 Arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), we can call the helper function in just a one-line callback.
+We will write a simple helper function that does nothing else but calling a provided function in a try/catch block. With the support of [ES6 Arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), we can call the helper function in just a one-line callback.
 
 ```javascript
 var obj = {};
@@ -125,7 +126,8 @@ function getSafeNaive(property) {
   }
 }
 
-let deepProperty = getSafeNaive(obj.prop1.deepProp.veryDeepProp.veryVeryDeepProp);//error from here, so that cannot go inside the try catch block
+let deepProperty = getSafeNaive(obj.prop1.deepProp.veryDeepProp.veryVeryDeepProp);
+//error from here, so that cannot go inside the try catch block
 ```
 
 ### Elvis Operator

@@ -1,6 +1,7 @@
 ---
 title: "Find a sequence to produce a number by adding 5 or multiplying by 3"
-categories: javascript 
+categories: random
+tags: javascript 
 ---
 
 Just read an interesting problem this morning. It seems not to be difficult.

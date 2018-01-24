@@ -1,6 +1,6 @@
 ---
 title: "The combination of debounce and throttle"
-categories: javascript
+categories: experience
 tags: jquery debounce throttle
 ---
 

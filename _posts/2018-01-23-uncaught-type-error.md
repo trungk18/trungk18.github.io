@@ -1,6 +1,7 @@
 ---
 title: "Uncaught TypeError: Cannot read property 'name' of undefined"
-categories: javascript typescript angular
+categories: experience
+tags: javascript typescript angular errorhandling
 ---
 
 It is a very common error when working with object and array to get a `TypeError: Cannot read property 'name' of undefined`. This happens when we try to access a property of a value that is undefined or null in JavaScript.

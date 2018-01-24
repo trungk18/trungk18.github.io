@@ -1,6 +1,7 @@
 ﻿---
 title: "ES6 in my daily life"
-categories: javascript es6 es2015 myexperience
+categories: experience 
+tags: es6 es2015 javascript
 ---
 
 ES2015/ES6 has been around for more than two years with all the exciting feature and syntax. After working with TypeScript and Angular 2 in a project for more than a year, there are the features that I often apply in my code.

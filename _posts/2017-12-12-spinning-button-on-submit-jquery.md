@@ -1,6 +1,7 @@
 ---
 title: "Spinning button onSubmit form with jQuery and ASP.NET MVC"
-categories: javascript jquery mvc
+categories: tutorial
+tags: jquery mvc bootstrap
 ---
 
 In Zyllem, we are leveraging ASP.NET MVC 5 to build our product. So basically, almost 80% of our code base and UI stuff is doing as server side. 20% of the code is the client-side app written in JavaScript in AngularJS, and also TypeScript in Angular 2/4.

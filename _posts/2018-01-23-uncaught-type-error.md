@@ -28,7 +28,7 @@ console.log(obj.prop1.deepProp); //Uncaught TypeError: Cannot read property 'dee
 
 There are some ways to avoid this kind of errors.
 
-1. The simplest approach and it works well for small chains of properties is using the logical `AND operator &&`. E.g
+**1. The simplest approach is using the logical `AND operator &&`. **
 
 ```javascript
 var obj = {};
@@ -36,11 +36,14 @@ console.log(obj.prop1.deepProp); //Uncaught TypeError: Cannot read property 'dee
 console.log(obj.prop1 && obj.prop1.deepProp); //undefined
 ```
 
-This works because the `&&` and operators actually return the value of one of the specified operands if these operators are used with non-Boolean values, they may return a non-Boolean value. The rule is described as If we had `expr1 && expr2`. **Returns expr1 if it can be converted to false; otherwise, returns expr2. Thus, when used with Boolean values, && returns true if both operands are true; otherwise, returns false.** 
+This works because the `&&` operators actually return one of the value of the specified operands if these operators are used with non-Boolean values. The rule is described as. If we had `expr1 && expr2`, it will 
+
+- Returns expr1 if it can be converted to false; otherwise, returns expr2. 
+- Thus, when used with Boolean values, && returns true if both operands are true; otherwise, returns false.
 
 See more on [Expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
 
-The `obj.prop1 && obj.prop1.deepProp` returns `undefined` because `obj.prop1` is undefined which will be converted/coerced to `false`. The reason behind how JavaScript uses type coercion in Boolean contexts. You can read from [Truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
+The `obj.prop1 && obj.prop1.deepProp` returns `undefined` because `obj.prop1` is undefined which will be converted/coerced to `false`. The reason behind how JavaScript uses type coercion in Boolean contexts. You can read more, [Truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
 
 I often use the `&&` to check If the property is actually existed before going down further.
 
@@ -54,7 +57,7 @@ if (obj.prop1.deepProp)
   doSomething();
 ```
 
-But it is getting ugly very soon If we are going too deep into a property.
+It works well for small chains of properties, but getting ugly very soon If we are going too deep into a property.
 
 ```javascript
 var obj = {
@@ -64,7 +67,8 @@ let neededProperty = obj.prop1.deepProp.veryVeryDeepProp;
 //Uncaught TypeError: Cannot read property 'deepProp' of undefined
 
 let deepProperty =
-  obj.prop1 && obj.prop1.deepProp.veryDeepProp.veryVeryDeepProp;
+  obj.prop1 && 
+  obj.prop1.deepProp.veryDeepProp.veryVeryDeepProp;
 //Uncaught TypeError: Cannot read property 'deepProp' of undefined.
 //Same error as above because prop1 is an object which will be coerced to true so that
 //obj.prop1.deepProp.veryVeryDeepProp operand will be evaluated and throw and error
@@ -78,7 +82,9 @@ let safeProperty =
 //This is a very safe check but the code will be messy.
 ```
 
-2. Because some things can go wrong, we can think of using try/catch blocks.
+**2. Using try/catch blocks.**
+
+Because some things can go wrong...
 
 ```javascript
 try {
@@ -91,7 +97,7 @@ try {
 
 But placing many try/catch blocks throughout your code just to access properties is neither practical nor readable.
 
-3. Helper function
+**3. Helper function**
 
 We will write a simple helper function that does nothing else but calling a provided function in a try/catch block. With the support of [ES6 Arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), we can call the helper function in just a one-line callback.
 

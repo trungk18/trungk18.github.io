@@ -33,6 +33,10 @@ But what I want to archive current is kind of the combination between debounce a
 
 Basically, our system has a long process that will fire a lot of update to the client. When I received the server command on the client,I will need additional HTTP requests back to server to get some information. So that It will hit the server back as long as the server sending me update.
 
-I was using debounce to prevent sending too many requests back to the server If the time between two commands is within 300ms. But there is one use case where the server constantly sending the update to the client in, e.g 10 minutes. Meaning the client will trigger the getItemCount at 10m 300ms.
+I was using debounce to prevent sending too many requests back to the server If the time between two commands is within 1s. But there is one use case where the server constantly sending the update to the client in, e.g 10 minutes. Meaning the client will trigger the getItemCount at 10m 1s.
 
-So that I came up with the idea of combo, which is the combination of both debounce and throttle. I want the mechanism to get additional data from the server isn't run more than needed (only once per 1 minute). But I also want it to run as soon as the server stopped emitting (trigger the get update If the last update was more than 300ms ago)
+So that I came up with the idea of combo, which is the combination of both debounce and throttle.
+
+1. Trigger the UI update immediately when receiving the first event sending from the server.
+2. If there are more event to come, don't run the next event unless it is less than 1 second from the last event.
+3. If the server keeps sending the event. Run the condition (2) above and do the update every 60 seconds.

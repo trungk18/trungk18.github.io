@@ -65,7 +65,7 @@ facebook:
   username               :
   app_id                 : "149263715711638"
   publisher              : 
-og_image                 : /img/trungk18.png
+og_image                 : 
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:

@@ -6,7 +6,7 @@ tags: jquery debounce throttle
 
 Debounce and throttle are two techniques to control how many times we allow a function to be executed over time.
 
-The real worl example could be:
+The real world example could be:
 
 - Wait until the user stops resizing the window
 - Don't fire an ajax event until the user stops typing

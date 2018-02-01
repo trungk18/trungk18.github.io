@@ -146,7 +146,9 @@ Currently, there is no elvis operator in neither JavaScript nor TypeScript.
 In Angular, there is the support elvis operator to protect against a view render failure. They call it [safe navigation operator](https://angular.io/guide/template-syntax#expression-operators). Take the example below
 
 ```javascript
+{% raw %}
 The current person name is {{nullObject?.name}}
+{% endraw %}
 ```
 
 Since it is trying to access `name` property of a null value, **the whole view disappears** and you can see the error inside the browser console. It works perfectly with long property paths such as `a?.b?.c?.d`. So I recommend you to use it everytime you need to access a property inside a template.

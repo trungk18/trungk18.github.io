@@ -63,4 +63,4 @@ Then I rebuild and re-analyze the bundle, you can see how all the locale was gon
 
 ![analyze webpack bundle source-map-explorer](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/alalyze-webpack-04.png)
 
-I hope you guys found it helpful and can apply to your project. Cheer.
+I hope you guys find it helpful to apply to your project. Cheer.

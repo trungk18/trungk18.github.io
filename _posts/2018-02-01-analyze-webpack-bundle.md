@@ -1,5 +1,5 @@
 ---
-title: "Analyze webpack bundle with source-map-explorer"
+title: "Analyze webpack bundle with source-map-explorer. Optimize moment.js with webpack"
 categories: experience
 tags: webpack typescript
 ---

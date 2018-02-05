@@ -1,7 +1,7 @@
 ---
-title: "Angular tips: Avoid import RxJS in vendor.ts"
+title: "Angular Tips: Avoiding unnecessary RxJS in vendor.ts"
 categories: experience
-tags: webpack typescript
+tags: webpack typescript angular
 ---
 
 About 1.5 years ago, Angular was officially released the so-called Angular 2 after years in beta version. I was excited about this and even came and ask my boss to start building the new module in Angular, instead of current AngularJS. At the very beginning, Angular's document was also very limited in both quantity and quality. We were even ended up with SystemJS in the production site. It was even worse than AngularJS performance because SystemJS need to load the whole bunch of Angular code in the browser before our app start rendering. But finally, they published a guide to pack Angular with Webpack.

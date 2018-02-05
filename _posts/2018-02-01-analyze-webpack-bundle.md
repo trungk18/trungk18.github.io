@@ -1,5 +1,5 @@
 ---
-title: "Analyze webpack bundle with source-map-explorer. Optimize moment.js with webpack"
+title: "Analyze webpack bundle with source-map-explorer. Optimize moment.js"
 categories: experience
 tags: webpack typescript
 ---
@@ -8,7 +8,7 @@ Webpack is a module bundler which means that it bundles together all of your Jav
 
 Recently our bundle size suddenly getting so much bigger than before. Although `webpack` provide the information of how your bundle was composed of. I found that [source-map-explorer](https://github.com/danvk/source-map-explorer) tool shows an easy-to-understand-and-explore visualization to help you debug where all the code is coming from.
 
-Take note of the image below. The size of `client-api.js` file before was just 31kb only.
+Take note of the image below. The size of `client-api.js` file before was just **100kb** only.
 
 ![analyze webpack bundle source-map-explorer](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/alalyze-webpack-01.png)
 
@@ -35,7 +35,7 @@ After running the command, this is how my client-api.js bundle looks like. You c
 
 ![analyze webpack bundle source-map-explorer](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/alalyze-webpack-03.png)
 
-One of the obvious parts we can take out is the moment.js locale, which accounts for 167kb and we are not using it at all. It happened because when you write `var moment = require('moment')` in your code and pack with webpack, the bundle will include all locale files.
+One of the obvious parts we can take out is the moment.js locale, which accounts for **167kb** and we are not using it at all. It happened because when you write `var moment = require('moment')` or `import * as moment from 'moment'` in your code and pack with webpack, the bundle will include all locale files.
 
 To remove all locale files, I will use the IgnorePlugin. Refer to [this question](https://stackoverflow.com/q/25384360/3375906) for more options.
 
@@ -59,7 +59,7 @@ require('moment/locale/ja');
 moment.locale('ja');
 ```
 
-Then I rebuild and re-analyze the bundle, you can see how all the locale was gone. We have just saved 100kb, quite a lot.
+Then I rebuild and re-analyze the bundle, you can see how all the locale was gone. We have just saved 100kb, quite a lot right?
 
 ![analyze webpack bundle source-map-explorer](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/alalyze-webpack-04.png)
 

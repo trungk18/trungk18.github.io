@@ -81,4 +81,8 @@ var MAX_ITEM = 15;
 var URL = 'https://www.zyllem.com/discover-zyllem'
 ```
 
-### More to come includes function constructor and literal values
+### Update
+
+Recently, I have been reading this awesome guide. It is all about how to write clean Javascript code. You guys can check it on the below link.
+
+[https://github.com/ryanmcdermott/clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript)

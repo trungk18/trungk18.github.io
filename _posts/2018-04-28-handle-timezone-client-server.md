@@ -25,7 +25,7 @@ I did a quick test with Moment timezone, and basically most client-side library 
 
 Which is very different from what we are using on the portal since we are using Microsoft technology. And it is Microsoft timezone.
 
-#### So we came out with two solutions:
+### So we came out with two solutions:
 
 1. Server converts the timezone into IANA format and sends it to client using API. It doesn't sound convenience because, with every single Date object, we need to include another string property as a timezone, and the string is big. E.g `Singapore Standard Time`
 

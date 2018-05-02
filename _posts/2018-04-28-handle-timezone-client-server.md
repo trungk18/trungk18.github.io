@@ -23,7 +23,7 @@ I did a quick test with Moment timezone, and basically most client-side library 
 
 - Client library the support IANA: [https://stackoverflow.com/a/15171030/3375906](https://stackoverflow.com/a/15171030/3375906)
 
-Which is very different from what we are using on the portal since we are using Microsoft technology. And it is Microsoft timezone.
+Which is very different from our technology since we are using Microsoft and it come with their timezone (Microsoft's one).
 
 ### So we came out with two solutions:
 

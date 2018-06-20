@@ -51,6 +51,7 @@ timezone.ts
 import { getSafe } from "./utils";
 
 import * as moment from "moment";
+
 export const DEFAULT_FORMAT = "DD MMM YYYY, HH:mm";
 export const NUMERAL_DATE_TIME_ZONE_FORMAT = "L LT";
 export const NAME_DATE_TIME_ZONE_FORMAT = "ll LT";
@@ -59,19 +60,23 @@ export const NAME_DATE_TIME_ZONE_FULL_FORMAT = "llll";
 export const TIME_ONLY_FORMAT = "LT";
 
 export class MomentTimezone {
+  private static momentLocale: string;
+  private static setLocale() {
+    if(!this.momentLocale) {
+      this.momentLocale = getSafe(() => navigator.languages[0]) || navigator.language;
+      moment.locale(this.momentLocale);
+    }    
+  }
+
   //input format "2018-04-28T11:00:00.00+08:00"
-  public static formatDateInTimeZone(input: string): string {
-    let locale = getSafe(() => navigator.languages[0]) || navigator.language;
-    let parsedTime = moment.parseZone(input);
-    return locale
-      ? parsedTime.locale(locale).format(NUMERAL_DATE_TIME_ZONE_FORMAT)
-      : parsedTime.format(DEFAULT_FORMAT);
+  public static formatDateInTimeZone(input: string): string {     
+    this.setLocale();   
+    return moment.parseZone(input).format(this.momentLocale ? NUMERAL_DATE_TIME_ZONE_FORMAT : DEFAULT_FORMAT)      
   }
 
   public static parseDateInTimeZone(input) {
-    let locale = getSafe(() => navigator.languages[0]) || navigator.language;
-    let parsedTime = moment.parseZone(input);
-    return locale ? parsedTime.locale(locale) : parsedTime;
+    this.setLocale();
+    return moment.parseZone(input);    
   }
 }
 ```

@@ -88,6 +88,9 @@
 .author__link {
   text-decoration: none;
   color: #000;
+  &:hover { 
+    color: $dark-gray;
+  }
 }
 
 .author__avatar {

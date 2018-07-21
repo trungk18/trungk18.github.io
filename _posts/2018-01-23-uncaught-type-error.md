@@ -29,7 +29,7 @@ console.log(obj.prop1.deepProp); //Uncaught TypeError: Cannot read property 'dee
 
 There are some ways to avoid this kind of errors.
 
-**1. The simplest approach is using the logical `AND operator &&`. **
+**1. The simplest approach is using the logical `AND operator &&`.**
 
 ```javascript
 var obj = {};

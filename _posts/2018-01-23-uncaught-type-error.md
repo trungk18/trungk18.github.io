@@ -65,12 +65,12 @@ var obj = {
   prop1: {}
 };
 let neededProperty = obj.prop1.deepProp.veryVeryDeepProp;
-//Uncaught TypeError: Cannot read property 'deepProp' of undefined
+//Uncaught TypeError: Cannot read property 'veryVeryDeepProp' of undefined
 
 let deepProperty =
   obj.prop1 && 
   obj.prop1.deepProp.veryDeepProp.veryVeryDeepProp;
-//Uncaught TypeError: Cannot read property 'deepProp' of undefined.
+//Uncaught TypeError: Cannot read property 'veryDeepProp' of undefined
 //Same error as above because prop1 is an object which will be coerced to true so that
 //obj.prop1.deepProp.veryVeryDeepProp operand will be evaluated and throw and error
 
@@ -142,6 +142,8 @@ let deepProperty = getSafeNaive(obj.prop1.deepProp.veryDeepProp.veryVeryDeepProp
 Some programming languages also support the so called elvis operator `?.` that is yet another approach to the same problem. Applying it to the dirty example from above would like this `obj?.prop1?.deepProp?.veryDeepProp?.veryVeryDeepProp`. Essentially, it makes the compiler stop accessing more nested properties as soon as one of them is null (or undefined, or whatever null-type(s) that language uses).
 
 Currently, there is no elvis operator in neither JavaScript nor TypeScript.
+
+---
 
 In Angular, there is the support elvis operator to protect against a view render failure. They call it [safe navigation operator](https://angular.io/guide/template-syntax#expression-operators). Take the example below
 

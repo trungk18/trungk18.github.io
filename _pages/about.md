@@ -1,0 +1,18 @@
+---
+permalink: /about/
+title: "About"
+layout: single
+author_profile: true
+---
+
+<br/>
+
+Hi! I'm Trung.
+
+Front-end Engineer and UX zealot. Working at Zyllem on all the front-end matter includes, but not limited to 
+
+- Turning designs into responsive UIs  with HTML / CSS (LESS/SCSS).
+- Building client side application with (vanilla / JQuery / Angular) and Typescript.
+- Improving user experience. 
+
+[Zyllem](https://www.zyllem.com/) is a fast growing regional start-up based in Singapore. Our software connects the fragmented logistics network by allowing enterprises to build and manage their entire distribution network that includes partnerships and own assets in one platform.

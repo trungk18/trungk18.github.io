@@ -68,6 +68,19 @@
 }
 
 .page__content {
+  
+  .project-content {
+    .project-title {
+      color: $github-color;
+    }
+
+    .project-date {
+      color: #00000090;
+      font-size: 13px;
+      margin-left: 4px;
+    }
+  }
+
   img {
     cursor: pointer;
   }

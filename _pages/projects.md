@@ -25,8 +25,7 @@ This is the clone of Slack chat app with real-time support using  AngularJS to t
 
 A lightweight library to show a "loading" indicator while element is retrieving from server. 
 
-## Work Projects
-
+## Work and Freelance Projects
 
 <h3 class="project-content">    
     <a class="project-title" href="https://www.nugit.co/" target="_blank">Nugit Branding Website</a>
@@ -35,4 +34,31 @@ A lightweight library to show a "loading" indicator while element is retrieving 
 
 My team at [Chosen Lab](https://www.thechosenlab.com/) renovated this website using [Gatsby](https://github.com/gatsbyjs/gatsby), a blazing fast modern site generator for React. This is the first time we built a headless CMS. We chose [DatoCMS](https://www.datocms.com/) for that purpose.
 
+<h3 class="project-content">    
+    <a class="project-title" href="https://www.zyllem.com/" target="_blank">Zyllem Internal Web App</a>
+    <span class="project-date">2016 - Now</span>
+</h3>
 
+I have been the only front end engineer since I joined Zyllem. I built all the SPA (Single Page App) inside Zyllem platform with TypeScript and Angular. 
+
+<h3 class="project-content">    
+    <a class="project-title" href="https://www.statecourts.gov.sg/" target="_blank">State Courts</a>
+    <span class="project-date">2015 Nov</span>
+</h3>
+A big scale project. Still, I did all the front end matters.
+
+<h3 class="project-content">    
+    <a class="project-title" href="https://sfintercare.com/" target="_blank">SF-SPA Branding Website</a>
+    <span class="project-date">2015 March</span>
+</h3>
+
+I took care of all the front end matters, includes converting PSD to HTML responsive, using SASS. 
+
+<h3 class="project-content">    
+    <a class="project-title" href="www.heinz.com.au/" target="_blank">HEINZ</a>
+    <span class="project-date">Feb 2014</span>
+</h3>
+
+A freelance web project to complete in a short time frame.
+
+*And many more*

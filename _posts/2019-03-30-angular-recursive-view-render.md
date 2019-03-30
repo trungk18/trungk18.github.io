@@ -1,17 +1,11 @@
 ---
-title: "Angular - render recursive view using *ngFor and ng-template"
+title: "Angular render recursive view using *ngFor and ng-template"
 categories: experience
 ---
 
-### Source code
-
-Click here to view a working solution.
-
-[https://stackblitz.com/edit/angular-mhwflb](https://stackblitz.com/edit/angular-mhwflb)
-
 ### Problem
 
-We're all familiar with recursive view, I guess. One of the most common component that needed this technique is the nested navigation bar. The HTML structure and UI look like.
+We're all familiar with recursive view. One of the most common component that needed this technique is the nested navigation bar. The HTML structure and UI look like.
 
 ```html
 <ul>
@@ -43,6 +37,13 @@ We're all familiar with recursive view, I guess. One of the most common componen
   </li>
 </ul>
 ```
+
+
+### Source code
+
+Click here to view a working solution.
+
+[https://stackblitz.com/edit/angular-mhwflb](https://stackblitz.com/edit/angular-mhwflb)
 
 ### Solution
 

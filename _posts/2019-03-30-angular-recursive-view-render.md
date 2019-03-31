@@ -62,16 +62,13 @@ So the trick is very simple, you set up a ng-template which take a list of Navig
 app.component.html
 
 ```html
-
 <ul>
   <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ $implicit: list }"></ng-container>
 </ul>
 
 <ng-template #recursiveListTmpl let-list>
   <li *ngFor="let item of list">
-    {% raw %}
-    {{ item.title }}
-    {% endraw %}
+    {% raw %} {{ item.title }} {% endraw %}
     <ul *ngIf="item.children.length > 0">
       <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ $implicit: item.children }"></ng-container>
     </ul>

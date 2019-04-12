@@ -11,7 +11,7 @@ Basically the UI will be triggering on click, and if there is any click event ou
 
 After cross this question, I tested these two solutions that looks promising. Sounds easy but why I didn't think of it in the first place ?!
 
-### Solution 1. Trigger the F8 button while the element is displaying.
+## Solution 1. Trigger the F8 button while the element is displaying.
 
 1. Browse to the desired page, open the dev console.
 2. Select the `Sources` tab in `Chrome debugger`.
@@ -23,7 +23,7 @@ After cross this question, I tested these two solutions that looks promising. So
 ![Solution 1](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/freeze-screen-debugger-chrome-solution-1.gif)
 
 
-### Solution 2. Run the setTimeout to trigger debugger.
+## Solution 2. Run the setTimeout to trigger debugger.
 
 1. Run the following javascript in the console. This will break into the debugger in 5 seconds.
 

@@ -1,15 +1,15 @@
 ---
-title: "Freeze screen in Chrome debugger / DevTools panel for inspect element that will be disappear on hover/click"
+title: "Freeze screen in Chrome debugger / DevTools panel for inspect element that will disappear on hover/click"
 categories: experience
 ---
 
 Today I need to use the chrome debugger to analyze the CSS of a time picker component, and I found it is not so straightforward...
 
-Basically the UI will be triggering on click, and if there is any click event outside of the component itself, it will be disappeared. Or in the other word, be removed completely from the DOM. The same problem happened if you want to see the style of bootstrap popover, or any component where some UI will be displayed on hover/click, and hidden on hover/click outside.
+Basically the UI will be triggering on click, and if there is any click event outside of the component itself, it will be vanished. Or in the other word, be completely removed from the DOM. The same problem happen if you want to see the style of bootstrap popover, or any component where some UI will be displayed on hover/click, and hidden on hover/click outside.
 
 ![StackOverFlow](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/freeze-screen-debugger-chrome-1.gif)
 
-After cross this question, I tested these two solutions that looks promising. Sounds easy but why I didn't think of it in the first place ?!
+After cross this [question](https://stackoverflow.com/q/17931571/3375906), I tested these two solutions that looks promising. Sounds easy but why I didn't think of it in the first place ?!
 
 ## Solution 1. Trigger the F8 button while the element is displaying.
 

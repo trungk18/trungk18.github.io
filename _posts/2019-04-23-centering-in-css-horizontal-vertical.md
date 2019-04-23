@@ -9,8 +9,6 @@ categories: experience
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async="async" src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-<br/>
 <br/>
 
 In CSS, several properties can be used to align elements horizontally and vertically. I hope these below tips will help you understand and able to align the element center horizontal and vertical.

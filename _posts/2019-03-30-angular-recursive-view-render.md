@@ -41,9 +41,8 @@ We're all familiar with recursive view. One of the most common component that ne
 
 ### Source code
 
-Click here to view a working solution.
-
-[https://stackblitz.com/edit/angular-mhwflb](https://stackblitz.com/edit/angular-mhwflb)
+<iframe src="https://stackblitz.com/edit/angular-mhwflb?embed=1&file=src/app/app.component.ts"></iframe>
+<br/>
 
 ### Solution
 

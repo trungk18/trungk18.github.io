@@ -3,8 +3,6 @@ title: "Angular render recursive view using *ngFor and ng-template"
 categories: experience
 ---
 
-### Problem
-
 We're all familiar with recursive view. One of the most common component that needed this technique is the nested navigation bar. The HTML structure and UI look like.
 
 ```html
@@ -37,12 +35,6 @@ We're all familiar with recursive view. One of the most common component that ne
   </li>
 </ul>
 ```
-
-
-### Source code
-
-<iframe src="https://stackblitz.com/edit/angular-mhwflb?embed=1&file=src/app/app.component.ts"></iframe>
-<br/>
 
 ### Solution
 
@@ -157,4 +149,9 @@ export class AppComponent {
 }
 ```
 
-Here you have it. It was rendering as expected. Of course there is another solution in which we create a new component/ directive that take input as the list. And do exactly the same thing as `ng-template` example above. Hope you guys can get the idea.
+Then you have it. It was rendering as expected. Of course there is another solution in which we create a new component/ directive that take input as the list. And do exactly the same thing as `ng-template` example above. 
+
+### Working Example
+
+<iframe style="width: 100%; height: 400px;" src="https://stackblitz.com/edit/angular-mhwflb?embed=1&file=src/app/app.component.ts"></iframe>
+<br/>

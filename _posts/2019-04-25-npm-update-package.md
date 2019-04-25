@@ -1,6 +1,7 @@
 ---
 title: "npm - Check and update package if needed"
 categories: experience
+tags: npm angular
 ---
 
 I was planning to upgrade Angular to the latest version for quite sometimes but since I have sticked to Angular 5 for so long, the upgrading process was complicated than I thought.

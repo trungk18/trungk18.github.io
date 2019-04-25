@@ -1,6 +1,7 @@
 ---
 title: "Angular render recursive view using *ngFor and ng-template"
 categories: experience
+tags: angular
 ---
 
 We're all familiar with recursive view. One of the most common component that needed this technique is the nested navigation bar. The HTML structure and UI look like.

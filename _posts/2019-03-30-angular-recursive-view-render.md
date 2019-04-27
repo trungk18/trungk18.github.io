@@ -154,5 +154,5 @@ Then you have it. It was rendering as expected. Of course there is another solut
 
 ### Working Example
 
-<iframe style="width: 100%; height: 400px;" src="https://stackblitz.com/edit/angular-mhwflb?embed=1&file=src/app/app.component.ts"></iframe>
+<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-mhwflb?embed=1&file=src/app/app.component.ts"></iframe>
 <br/>

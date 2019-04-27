@@ -7,7 +7,7 @@ Today I need to fix a small CSS issue of a time picker component. In order to de
 
 Basically the UI will be triggering on click, and if there is any click event outside of the component itself, it will be vanished. Or in the other word, be completely removed from the DOM. The same problem happens if you want to see the style of bootstrap popover, or any component where some UI will be displayed on hover/click, and hidden on hover/click outside.
 
-![StackOverFlow](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/freeze-screen-debugger-chrome-1.gif)
+![Freeze screen in Chrome debugger](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/freeze-screen-debugger-chrome-1.gif)
 
 After crossing this [question](https://stackoverflow.com/q/17931571/3375906), I tested these two solutions that looks promising. Sounds easy but why I didn't think of these in the first place ?!
 

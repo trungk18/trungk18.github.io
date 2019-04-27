@@ -4,9 +4,7 @@ categories: experience
 tags: angular typescript
 ---
 
-## TL;DR
-
-To receive the JSON object from the server with all the methods available on the client side. For example the server send me a list of `User`. Inside this class defined on the server has a method name `getFullName`. I want to use this method `getFullName` on the client side side.
+TL;DR - To receive the JSON object from the server with all the methods available on the client side. For example the server send me a list of `User`. Inside this class defined on the server has a method name `getFullName`. I want to use this method `getFullName` on the client side side.
 
 ## Working Example
 
@@ -117,5 +115,5 @@ fetch("/api/users").then((users: Object[]) => {
 Now you can use `users[0].getFullName()` and `users[0].isAdult()` methods.
 
 #### This is the result as my console.log in the example does. You could clearly see the type of the object.
-
+<br/>
 ![Casting a JSON object to a TypeScript class](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/cast-parse-json-object-to-typescript-class-01.png)

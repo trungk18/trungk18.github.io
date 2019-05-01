@@ -8,7 +8,7 @@ TL;DR - To receive the JSON object from the server with all the methods availabl
 
 ## Working Example
 
-<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-ew2nai?embed=1&file=src/app/app.component.html"></iframe>
+<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-cast-json-to-typescript-class?embed=1&file=src/app/app.component.ts"></iframe>
 
 ## Problem
 
@@ -16,7 +16,7 @@ I started working with TypeScript about two years ago. Most of the time I read a
 
 Overtime, I found this [class-transformer](https://github.com/typestack/class-transformer) library is super helpful. You can install this into your project and start using it from now on to see the different. They supported nested property too so you don't have to worry about that. 
 
- #### It is worth mentioning that not all the time we need to cast from JSON object to a class, but sometimes it is really helpful. As per the example above, If I don't have the method `getFullName` in the instance of class, I would create a new util method that take a `User` as argument and return the expected result. The decision is yours.
+ #### It is worth mentioning that not all the time we need to cast from JSON object to a class, but sometimes it is really helpful. As per the example above, If I don't have the method `getFullName` in the instance of class, I would create a new util method that take a `User` as argument and return the expected result. The decision is yours. Parked all properties and methods inside a single class is more encapsulation in Object Oriented Programming while functional programing treated everything as a function.
 
 > The below section was quoted from their readme.
 

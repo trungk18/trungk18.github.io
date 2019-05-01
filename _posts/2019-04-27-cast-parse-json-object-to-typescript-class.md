@@ -8,7 +8,7 @@ TL;DR - To receive the JSON object from the server with all the methods availabl
 
 ## Working Example
 
-<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-ew2nai?embed=1&file=src/app/app.component.html"></iframe>
+<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-cast-json-to-typescript-class?embed=1&file=src/app/app.component.ts"></iframe>
 
 ## Problem
 

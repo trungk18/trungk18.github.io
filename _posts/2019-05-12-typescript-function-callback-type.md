@@ -4,9 +4,26 @@ categories: experience
 tags: typescript
 ---
 
+TL;DR To define the function callback type. You could.
+
+```javascript
+interface Greeter {
+  (message: string): void;
+}
+
+//OR
+//type Greeter = (message: string) => void;
+
+function sayHi(callback: Greeter) {
+  callback("Hi!");
+}
+```
+
+---
+
 A "callback" is a term that refers to a coding design pattern, available in any language that has function pointers. In this pattern, you pass a pointer to a function to another function, so that within the called function, it can "call back" the function you passed to it.
 
-You have to know to use callback in JavaScript. Often seen in many scenarios. Let take a look at the example below.
+You have to use callback in JavaScript before ?!. Often seen in many scenarios. Let take a look at the example below.
 
 ```javascript
 function sayHi(callback) {
@@ -22,15 +39,7 @@ sayHi(greeter)
 
 So there is a function `sayHi`, that accept another function as an argument and will execute this function when I start to call `sayHi`.  The problem is I don't know how the callback looks like, what is the type of its arguments. You can event call the function without any parameter, or multiple parameters. Doesn't matter at all.
 
-In TypeScript, more often I would define an interface with call signature like that.
-
-```javascript
-interface Greeter {
-  (message: string): void;
-}
-```
-
-And convert all the code into TypeScript would look like
+In TypeScript, more often I would define an interface  with call signature like that.
 
 ```javascript
 interface Greeter {
@@ -40,13 +49,6 @@ interface Greeter {
 function sayHi(callback: Greeter) {
   callback("Hi!");
 }
-
-function greeter(message: string){
-  console.log(`${message}, how are you doing?`)
-}
-
-sayHi(greeter);
-
 ```
 
 By declaring an interface that has a call signature named `Greeter` which accept a string as an argument. We can start to see callback detail.

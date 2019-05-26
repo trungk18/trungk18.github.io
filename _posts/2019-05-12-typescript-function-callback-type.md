@@ -4,7 +4,7 @@ categories: experience
 tags: typescript
 ---
 
-TL;DR To define the function callback type. You could.
+TL;DR To define the function callback type. You could declare interface that has a call signature. Or define a new type.
 
 ```javascript
 interface Greeter {

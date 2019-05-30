@@ -19,7 +19,8 @@ inputStr = null;
 trimText(inputStr);
 ```
 
-`null` and `undefined` are the root of all evil. It often leads to runtime errors. It is easy to write code that will throw Error at runtime.
+## null and undefined are the root of all evil. It often leads to runtime errors. It is easy to write code that will throw Error at runtime.
+
 The later code will call `trimText` on a null variable, the complier doesn't complain but we know **it will break at runtime**. Because there is no function `trim` on `null` type.
 
 To prevent it, TypeScript allows you to be explicit about what can and cannot be assigned a null or undefined. Added this line to `compilerOptions` inside your tsconfig.json file.

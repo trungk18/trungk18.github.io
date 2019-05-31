@@ -16,7 +16,7 @@ let inputStr = "Hello I am Trung";
 trimText(inputStr);
 
 inputStr = null;
-trimText(inputStr);
+trimText(inputStr); //Uncaught TypeError: Cannot read property 'trim' of null
 ```
 
 ## null and undefined are the root of all evil. It often leads to runtime errors. It is easy to write code that will throw Error at runtime.

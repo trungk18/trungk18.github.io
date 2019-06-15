@@ -38,7 +38,7 @@ this.getCategories().subscribe(categories => {
 })
 ```
 
-There are two approach to build up the category list.
+There are two approaches to build up the category list.
 
 ## 1. Form Array
 

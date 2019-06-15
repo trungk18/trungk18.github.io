@@ -55,9 +55,9 @@ buildCategoryFormGroup(categories: ProductCategory[], selectedCategoryIds: strin
 }
 ```
 
-This `buildCategoryFormGroup` will return me a FormArray. It also take a list of selected value as an argument so when you want to reuse the form for edit data, it could be helpful. For the purpose of create a new product form, it is not be applicable yet. 
+This `buildCategoryFormGroup` will return me a FormArray. It also take a list of selected value as an argument so If you want to reuse the form for edit data, it could be helpful. For the purpose of create a new product form, it is not be applicable yet. 
 
-Noted that when you try to access the values of this formArray. It will looks like `[false, true, true]`. To get a list of selected value, it required a bit more work to check from the list but based on the index. Doesn't sound really good to me but it works. 
+Noted that when you try to access the formArray values. It will looks like `[false, true, true]`. To get a list of selected id, it required a bit more work to check from the list but based on the array index. Doesn't sound good to me but it works. 
 
 ```javascript
 get categoriesFormArraySelectedIds(): string[] {
@@ -86,7 +86,7 @@ buildCategoryFormGroup(categories: ProductCategory[], selectedCategoryIds: strin
 }
 ```
 
-The value of the form group will look like
+The value of the form group will look like:
 
 ```javascript
 {
@@ -96,7 +96,7 @@ The value of the form group will look like
 }
 ```
 
-But most often we want to get only the list of categoryIds as `["category2", "category3"]`. That's why I also have to write a get value for that. I like this approach better comparing to the formArray, because I could actually take the value for the form itself.
+But most often we want to get only the list of categoryIds as `["category2", "category3"]`. I also have to write a get to take these data. I like this approach better comparing to the formArray, because I could actually take the value from the form itself.
 
 ```javascript
 get categoriesFormArraySelectedIds(): string[] {

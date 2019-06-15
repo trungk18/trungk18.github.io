@@ -3,11 +3,11 @@ title: "Skiing in Singapore - a coding diversion"
 categories: algo
 ---
 
-Hi there, it have been a while since my last post. Today I repost a quite interesting problem that I solved before. 
+Hi there, it have been a while since my last post. Today I am re posting a quite interesting problem that I solved before. 
 
 I read about this one on a [Senior Frontend JD](https://stackoverflow.com/jobs/162891/senior-front-end-engineer-redmart) on Stackoverflow. It looks promising so I decided to do it. You can read a step by step solution on my code. This is also my first time to use node API to read the local file.
 
-### Source code
+## Source code
 
 So basically it is a common tree traverse problem. I use the recursive function to solve it. I put my detail comment on the source code. Please help yourself. If there are any comments, just let me know. 
 
@@ -15,7 +15,76 @@ If you managed to run it on your local, you will get the number which is represe
 
 [Github](https://github.com/trungk18/algorithm-training/blob/master/001.%20Skiing%20in%20Singapore/app.ts)
 
-### To test it
+```javascript
+ReadFile.Read(__dirname, "map.txt", data => SkiingInSingapore.Main(data))
+
+class SkiingInSingapore {
+    //n m input
+    private static n: number;
+    private static m: number;
+
+    //array to hold the 2 dimensions array of number;
+    private static map: number[][] = [];
+
+    //the expected result will be saved here
+    private static maxLength: number = 0;
+    private static maxDrop: number = 0;
+
+    public static Main(data: string[]) {
+        let [firstLine, ...restData] = data;
+        let nm = splitString(firstLine);
+        this.n = nm[0];
+        this.m = nm[1];
+        for (let i = 0; i < restData.length; i++) {
+            this.map[i] = splitString(restData[i]);
+        }
+
+        for (var x = 0; x < this.n; x++) {
+            for (var y = 0; y < this.m; y++) {
+                //if the maxLength is greater then current value, no need to traverse
+                if (this.maxLength < this.map[x][y]) {
+                    this.traverse(x, y, 1, this.map[x][y]);
+                }
+            }
+        }
+        console.log(`Max length ${this.maxLength}, max drop ${this.maxDrop}`)
+    }
+
+    private static traverse(x: number, y: number, length: number, start: number) {
+        //consider as x y axis, instead of doing 4 if block. we can think about it as
+        //current point [x,y]
+        //go up [x, y + 1], go right [x + 1, y], go down [x, y - 1], go left [x - 1, y]
+        let xAxis = [0, 1, 0, -1];
+        let yAxis = [1, 0, -1, 0];
+
+        for (var k = 0; k < 4; k++) {
+            //check if the moving is still inside the graph
+            var isInsideGraph = x + xAxis[k] >= 0 && x + xAxis[k] < this.n && y + yAxis[k] >= 0 && y + yAxis[k] < this.m;
+            if (isInsideGraph && (this.map[x][y] > this.map[x + xAxis[k]][y + yAxis[k]])) {
+
+                //if can traverse and the current value is bigger the the next traverse point.
+                //set the length and keep the start point. to calculate the maxlength and drop later.
+                this.traverse(x + xAxis[k], y + yAxis[k], length + 1, start)
+            }
+        }
+
+        //current drop
+        var drop = start - this.map[x][y];
+        if (length > this.maxLength) {
+            this.maxLength = length;
+            this.maxDrop = drop;
+        }
+
+        //the use case where by length is the same but the drop is greater
+        if (length === this.maxLength && this.maxDrop < drop) {
+            this.maxDrop = drop;
+        }
+    }
+}
+
+```
+
+## Test
 
 There are 2 text files, named corresponding as.
 

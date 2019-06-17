@@ -55,6 +55,14 @@ buildCategoryFormGroup(categories: ProductCategory[], selectedCategoryIds: strin
 }
 ```
 
+```html
+<div *ngFor="let control of categoriesFormArr?.controls; let i = index" class="checkbox">
+  <label><input type="checkbox" [formControl]="control" />
+    {{ categories[i]?.title }}
+  </label>
+</div>
+```
+
 This `buildCategoryFormGroup` will return me a FormArray. It also take a list of selected value as an argument so If you want to reuse the form for edit data, it could be helpful. For the purpose of create a new product form, it is not be applicable yet. 
 
 Noted that when you try to access the formArray values. It will looks like `[false, true, true]`. To get a list of selected id, it required a bit more work to check from the list but based on the array index. Doesn't sound good to me but it works. 
@@ -84,6 +92,13 @@ buildCategoryFormGroup(categories: ProductCategory[], selectedCategoryIds: strin
   })
   return group;
 }
+```
+
+```html
+<div *ngFor="let item of categories; let i = index" class="checkbox">
+  <label><input type="checkbox" [formControl]="categoriesFormGroup?.controls[item.id]" /> {{ categories[i]?.title }}
+  </label>
+</div>
 ```
 
 The value of the form group will look like:

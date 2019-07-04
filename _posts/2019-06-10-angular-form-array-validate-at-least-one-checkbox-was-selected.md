@@ -114,10 +114,17 @@ The value of the form group will look like:
 But most often we want to get only the list of categoryIds as `["category2", "category3"]`. I also have to write a get to take these data. I like this approach better comparing to the formArray, because I could actually take the value from the form itself.
 
 ```javascript
-get categoriesFormArraySelectedIds(): string[] {
-  return this.categories
-    .filter((cat, catIdx) => this.categoriesFormArr.controls.some((control, controlIdx) => catIdx === controlIdx && control.value))
-    .map(cat => cat.id);
+get categoriesFormGroupSelectedIds(): string[] {
+  let ids: string[] = [];
+  for (var key in this.categoriesFormGroup.controls) {
+    if (this.categoriesFormGroup.controls[key].value) {
+      ids.push(key);
+    }
+    else {
+      ids = ids.filter(id => id !== key);
+    }
+  }
+  return ids;
 }
 ```
 

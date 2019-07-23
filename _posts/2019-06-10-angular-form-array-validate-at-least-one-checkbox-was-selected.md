@@ -43,15 +43,12 @@ There are two approaches to build up the category list.
 ## 1. Form Array
 
 ```javascript
-buildCategoryFormGroup(categories: ProductCategory[], selectedCategoryIds: string[] = []): FormGroup {
-  let group = this.formBuilder.group({}, {
-    validators: atLeastOneCheckboxCheckedValidator()
-  });
-  categories.forEach(category => {
-    let isSelected = selectedCategoryIds.some(id => id === category.id);
-    group.addControl(category.id, this.formBuilder.control(isSelected));
+buildCategoryFormArr(categories: ProductCategory[], selectedCategoryIds: string[] = []): FormArray {
+  const controlArr = categories.map(category => {
+      let isSelected = selectedCategoryIds.some(id => id === category.id);
+      return this.formBuilder.control(isSelected);
   })
-  return group;
+  return this.formBuilder.array(controlArr, atLeastOneCheckboxCheckedValidator())
 }
 ```
 
@@ -63,9 +60,9 @@ buildCategoryFormGroup(categories: ProductCategory[], selectedCategoryIds: strin
 </div>
 ```
 
-This `buildCategoryFormGroup` will return me a FormArray. It also take a list of selected value as an argument so If you want to reuse the form for edit data, it could be helpful. For the purpose of create a new product form, it is not be applicable yet. 
+This `buildCategoryFormArr` will return me a FormArray. It also take a list of selected value as an argument so If you want to reuse the form for edit data, it could be helpful. For the purpose of create a new product form, it is not be applicable yet. 
 
-Noted that when you try to access the formArray values. It will looks like `[false, true, true]`. To get a list of selected id, it required a bit more work to check from the list but based on the array index. Doesn't sound good to me but it works. 
+Noted that when you try to access the formArray values. It will looks like `[false, true, true]`. To get a list of selected id, you will have to take based on the array index. It doesn't sound good to me but it works. 
 
 ```javascript
 get categoriesFormArraySelectedIds(): string[] {
@@ -79,7 +76,7 @@ That's why I came up using `FormGroup` for that matter
 
 ## 2. Form Group
 
-The different of the formGroup is it will store the form data as the object, which required a key and a form control. So it is the good idea to set the key as the categoryId and then we can retrieve it later.
+The different of the formGroup is it will store the form data as the object, which required a key and a form control. So it is the good idea to set the key as the categoryId and then we can refer later.
 
 ```javascript
 buildCategoryFormGroup(categories: ProductCategory[], selectedCategoryIds: string[] = []): FormGroup {
@@ -111,13 +108,20 @@ The value of the form group will look like:
 }
 ```
 
-But most often we want to get only the list of categoryIds as `["category2", "category3"]`. I also have to write a get to take these data. I like this approach better comparing to the formArray, because I could actually take the value from the form itself.
+But most often we want to get only the list of categoryIds as `["category2", "category3"]`. I also have to write a get to take these data. I like this approach better comparing to the formArray, because I could actually take the value of the form itself.
 
 ```javascript
-get categoriesFormArraySelectedIds(): string[] {
-  return this.categories
-    .filter((cat, catIdx) => this.categoriesFormArr.controls.some((control, controlIdx) => catIdx === controlIdx && control.value))
-    .map(cat => cat.id);
+get categoriesFormGroupSelectedIds(): string[] {
+  let ids: string[] = [];
+  for (var key in this.categoriesFormGroup.controls) {
+    if (this.categoriesFormGroup.controls[key].value) {
+      ids.push(key);
+    }
+    else {
+      ids = ids.filter(id => id !== key);
+    }
+  }
+  return ids;
 }
 ```
 

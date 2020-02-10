@@ -155,3 +155,47 @@ The current person name is {{nullObject?.name}}
 
 Since it is trying to access `name` property of a null value, **the whole view disappears** and you can see the error inside the browser console. It works perfectly with long property paths such as `a?.b?.c?.d`. So I recommend you to use it everytime you need to access a property inside a template.
 
+### TypeScript 3.7 - Optional Chaining
+
+[Detail Release Note](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining)
+
+After a long wait, finally TypeScript has brought this feature to live. It basically is the elvis operator above.
+
+At its core, optional chaining lets us write code where TypeScript can immediately stop running some expressions if we run into a null or undefined. The star of the show in optional chaining is the new ?. operator for optional property accesses. When we write code like
+
+```javascript
+{% raw %}
+let x = foo?.bar.baz();
+{% endraw %}
+```
+
+this is a way of saying that when foo is defined, foo.bar.baz() will be computed; but when foo is null or undefined, stop what we’re doing and just return undefined.”
+
+```javascript
+{% raw %}
+let x = (foo === null || foo === undefined) ?
+    undefined :
+    foo.bar.baz();
+{% endraw %}
+```
+
+Note that if `bar` is null or undefined, our code will still hit an error accessing baz. Likewise, if `baz` is null or undefined, we’ll hit an error at the call site. ?. only checks for whether the value on the left of it is null or undefined - not any of the subsequent properties.
+
+You might find yourself using ?. to replace a lot of code that performs repetitive nullish checks using the && operator.
+
+```javascript
+{% raw %}
+// Before
+if (foo && foo.bar && foo.bar.baz) {
+    // ...
+}
+
+// After-ish
+if (foo?.bar?.baz) {
+    // ...
+}
+{% endraw %}
+```
+
+Keep in mind that `?.` acts differently than those `&&` operations since `&&` will act specially on `“falsy”` values (e.g. the empty string, 0, NaN, and, well, false), but this is an intentional feature of the construct. It doesn’t short-circuit on valid data like 0 or empty strings.
+

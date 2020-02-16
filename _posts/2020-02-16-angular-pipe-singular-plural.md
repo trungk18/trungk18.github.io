@@ -20,7 +20,15 @@ Some websites use the (s). So that it is up to the reader to remove (s) or add (
 
 ## 1. Custom Pipe
 
-But as a front end developer who cares about the user experience, I always want to correct it for them. I wrote a simple `plural` pipe which takes a number as an argument and based on that to return the plural form of a word. Default it will append `s` to the end of the word. But of course, you could specify the plural form of a noun because not all of them ended with `s` in a plural form. Such as `bus` will become `buses` or `hero` will become `heroes`.
+But as a front end developer who cares about the user experience, I always want to correct it for them. 
+
+At the beginning, I ended up to do the check for every word, so the code to display singular/plural will looks like:
+
+```typescript
+<p>Number of stops:{% raw %} {{ numberOfStops }} {% endraw %} stop{% raw %} {{ numberOfStops > 1 ? "s" : ""}} {% endraw %}</p>
+```
+
+But more and more code like that could be error prone, what if my team member when he is too tired for coding, he will do the check as `numberOfStops >= 1`. So that I wrote a simple `plural` pipe which takes a number as an argument and based on that to return the plural form of a word. As long as you are using this pipe, the result will be display as expected. No more funny check and error prone. By default it will append `s` to the end of the word. But of course, you could specify the plural form of a noun because not all of them ended with `s` in a plural form. Such as `bus` will become `buses` or `hero` will become `heroes`.
 
 The code of `PluralPipe` looks like below, you can open the stackblitz link on top to see it in action.
 
@@ -59,5 +67,4 @@ Actually the above code only run if with the first use case when the number is 1
 
 ## Working Example
 
-<iframe class="iframe-full-w" src="https://angular-singular-plural-form.stackblitz.io?embed=1&file=src/app/app.component.ts"></iframe>
-<br/>
+<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-singular-plural-form?embed=1&file=src/app/app.component.ts"></iframe>

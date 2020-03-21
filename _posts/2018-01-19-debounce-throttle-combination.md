@@ -13,7 +13,7 @@ The real world example could be:
 - Measure the scroll position of the page and respond at most every 50ms
 - Ensure good performance as you drag elements around in an app
 
-> Throttling enforces a maximum number of times a function can be called over time. As in "execute this function at most once every 100 milliseconds."
+> Throttling enforces a maximum number of times a function can be called over time. As in "execute this function at most once every 100 milliseconds.
 
 Say under normal circumstances you would call this function 1,000 times over 10 seconds. If you throttle it to only once per 100 milliseconds, it would only execute that function at most 100 times
 

@@ -152,7 +152,9 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Conversion
 markdown: kramdown
-highlighter: ""
+kramdown:
+   syntax_highlighter_opts:
+      disable : true
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false

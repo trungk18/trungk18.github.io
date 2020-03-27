@@ -55,9 +55,7 @@ buildCategoryFormArr(categories: ProductCategory[], selectedCategoryIds: string[
 ```html
 <div *ngFor="let control of categoriesFormArr?.controls; let i = index" class="checkbox">
   <label><input type="checkbox" [formControl]="control" />
-    {% raw %}
-    {{ categories[i]?.title }}
-    {% endraw %}
+    {% raw %}{{ categories[i]?.title }}{% endraw %}
   </label>
 </div>
 ```
@@ -96,9 +94,7 @@ buildCategoryFormGroup(categories: ProductCategory[], selectedCategoryIds: strin
 ```html
 <div *ngFor="let item of categories; let i = index" class="checkbox">
   <label><input type="checkbox" [formControl]="categoriesFormGroup?.controls[item.id]" 
-    {% raw %}/> 
-    {{ categories[i]?.title }}
-    {% endraw %}
+    {% raw %}/>{{ categories[i]?.title }}{% endraw %}
   </label>
 </div>
 ```

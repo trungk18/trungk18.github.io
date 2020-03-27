@@ -55,7 +55,9 @@ buildCategoryFormArr(categories: ProductCategory[], selectedCategoryIds: string[
 ```html
 <div *ngFor="let control of categoriesFormArr?.controls; let i = index" class="checkbox">
   <label><input type="checkbox" [formControl]="control" />
+    {% raw %}
     {{ categories[i]?.title }}
+    {% endraw %}
   </label>
 </div>
 ```
@@ -93,7 +95,10 @@ buildCategoryFormGroup(categories: ProductCategory[], selectedCategoryIds: strin
 
 ```html
 <div *ngFor="let item of categories; let i = index" class="checkbox">
-  <label><input type="checkbox" [formControl]="categoriesFormGroup?.controls[item.id]" /> {{ categories[i]?.title }}
+  <label><input type="checkbox" [formControl]="categoriesFormGroup?.controls[item.id]" 
+    {% raw %}/> 
+    {{ categories[i]?.title }}
+    {% endraw %}
   </label>
 </div>
 ```
@@ -137,7 +142,7 @@ export function atLeastOneCheckboxCheckedValidator(minRequired = 1): ValidatorFn
     Object.keys(formGroup.controls).forEach(key => {
       const control = formGroup.controls[key];
 
-      if (control.value === true) {
+      if (control.value) {
         checked++;
       }
     });

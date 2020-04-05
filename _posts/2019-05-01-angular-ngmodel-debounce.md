@@ -48,4 +48,4 @@ export class AppComponent {
 
 ## Working Example
 
-<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-ngmodel-debounce?embed=1&file=src/app/app.component.ts"></iframe>
+<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-ngmodel-debounce?embed=1&file=src/app/app.component.html&view=preview"></iframe>

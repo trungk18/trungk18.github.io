@@ -26,18 +26,18 @@ A "callback" is a term that refers to a coding design pattern, available in any 
 You have to use callback in JavaScript before ?!. Often seen in many scenarios. Let take a look at the example below.
 
 ```javascript
-function sayHi(callback) {
-    callback("Hi!");
-}
-
 function greeter(message){
 	console.log(`${message}, how are you doing?`)
+}
+
+function sayHi(callback) {
+    callback("Hi!");
 }
 
 sayHi(greeter)
 ```
 
-So there is a function `sayHi`, that accept another function as an argument and will execute this function when I start to call `sayHi`.  The problem is I don't know how the callback looks like, what is the type of its arguments. You can event call the function without any parameter, or multiple parameters. Doesn't matter at all.
+So there is a function `sayHi`, that accept another function as an argument and will execute this function when I start to call `sayHi`.  The problem is I don't know how the callback looks like, what is the type of its arguments. You can even call the function without any parameter, or multiple parameters. Doesn't matter at all.
 
 In TypeScript, more often I would define an interface  with call signature like that.
 
@@ -67,12 +67,12 @@ interface CallbackOneParam<T> {
   (param1: string): void;
 }
 
-function sayHi(callback: CallbackOneParam<string>) {
-  callback("Hi!");
-}
-
 function greeter(message: string){
   console.log(`${message}, how are you doing?`)
+}
+
+function sayHi(callback: CallbackOneParam<string>) {
+  callback("Hi!");
 }
 
 sayHi(greeter);

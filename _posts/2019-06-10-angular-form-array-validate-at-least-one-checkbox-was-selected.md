@@ -9,7 +9,7 @@ TL;DR
 2. Write a custom validator for check at least one checkbox was selected
 3. Working example 
 
-<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-validate-at-least-one-checkbox-was-selected?embed=1&file=src/app/app.component.ts"></iframe>
+<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-validate-at-least-one-checkbox-was-selected?embed=1&file=src/app/app.component.html&view=preview"></iframe>
 
 ---
 I often have the requirement to make sure there is at least one checkbox inside a list of checkbox got selected on the UI. With the support of Angular Reactive form, you can archive it in a few lines of code.

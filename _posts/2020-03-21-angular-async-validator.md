@@ -8,7 +8,7 @@ TL;DR - Write a custom [async validator](https://angular.io/api/forms/AsyncValid
 
 ## Working Example
 
-<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-custom-async-validator?embed=1&file=src/app/app.component.ts"></iframe>
+<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-custom-async-validator?embed=1&file=src/app/app.component.html&view=preview"></iframe>
 
 ## Problem
 

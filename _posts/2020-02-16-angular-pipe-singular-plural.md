@@ -67,4 +67,4 @@ Actually the above code only run if with the first use case when the number is 1
 
 ## Working Example
 
-<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-singular-plural-form?embed=1&file=src/app/app.component.ts"></iframe>
+<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-singular-plural-form?embed=1&file=src/app/app.component.html&view=preview"></iframe>

@@ -1,4 +1,4 @@
-## [Trung Vo Tuan](http://trungk18.github.io/)
+## [Trung Vo](http://trungk18.github.io/)
 
 ### Front-end Developer
 

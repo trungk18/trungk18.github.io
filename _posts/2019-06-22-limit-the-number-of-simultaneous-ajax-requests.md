@@ -49,9 +49,15 @@ var lazyLoadAjaxManager = (function () {
     };
 })();
 
-//Use -> call addRequest(url)
-lazyLoadAjaxManager.addRequest("https://example.com/profile")
-lazyLoadAjaxManager.addRequest("https://example.com/profile")
+//To use -> call addRequest(url). Usually for a large number of request, we will do it inside a loop. E.g
+// for (const userId of userIds) {
+//     lazyLoadAjaxManager.addRequest(`https://example.com/user/${userId})
+// }
+
+lazyLoadAjaxManager.addRequest("https://example.com/request1")
+lazyLoadAjaxManager.addRequest("https://example.com/request2")
+lazyLoadAjaxManager.addRequest("https://example.com/request3")
+lazyLoadAjaxManager.addRequest("https://example.com/request4")
 ```
 
 Basically, I first pushed all request url to a queue with a function called `addRequest` and call `checkQueue`. `checkQueue` checks to see if there are items in the queue and if the number of active requests is less than `MAX_PARALLEL_CALL`. If these conditions are met, it pops a request from the queue and turns it into a real AJAX request. Then it attaches a done handler to the request that decreases the active request count and calls `checkQueue`.

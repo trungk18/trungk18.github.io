@@ -11,7 +11,21 @@ Basically the UI will be triggering on click, and if there is any click event ou
 
 After crossing this [question](https://stackoverflow.com/q/17931571/3375906), I tested these two solutions that looks promising. Sounds easy but why I didn't think of these in the first place ?!
 
-## Solution 1. Trigger the F8 button while the element is displaying.
+## Solution 1. Run the setTimeout to trigger debugger.
+
+1. Run the following javascript in the console. This will break into the debugger in 5 seconds.
+
+```javascript
+setTimeout(function(){debugger;}, 5000)
+```
+
+2. Show your element (by hovering or however) and wait until Chrome breaks into the Debugger.
+3. Go to the Elements tab in inspector
+4. Find your element and have fun modifying the CSS
+
+![Solution 1](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/freeze-screen-debugger-chrome-solution-2.gif)
+
+## Solution 2. Trigger the F8 button while the element is displaying.
 
 1. Browse to the desired page, open the dev console.
 2. Select the `Sources` tab in `Chrome debugger`.
@@ -20,19 +34,6 @@ After crossing this [question](https://stackoverflow.com/q/17931571/3375906), I 
 5. Go to the Elements tab in inspector
 6. Find your element and have fun modifying the CSS
 
-![Solution 1](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/freeze-screen-debugger-chrome-solution-1.gif)
+**Noted**: If the DOM element uses the focusout event to hide you have no chance to hit F8
 
-
-## Solution 2. Run the setTimeout to trigger debugger.
-
-1. Run the following javascript in the console. This will break into the debugger in 5 seconds.
-
-```javascript
-setTimeout(function(){debugger;}, 5000)
-```
-
-2. Go show your element (by hovering or however) and wait until Chrome breaks into the Debugger.
-3. Go to the Elements tab in inspector
-4. Find your element and have fun modifying the CSS
-
-![Solution 2](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/freeze-screen-debugger-chrome-solution-2.gif)
+![Solution 2](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/freeze-screen-debugger-chrome-solution-1.gif)

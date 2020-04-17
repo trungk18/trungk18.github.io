@@ -62,13 +62,13 @@ See how I can convert it from C# code in just a click. Of course, not all the cl
 
 It is still in the early phase so that currently only supports converting to an interface, also only includes public, non-static properties & fields - not methods, not private members. But still, it did save me sometimes. It also comes with some configuration as below.
 
-- `"csharpToTypeScript.export"`: true controls exporting.
-- `"csharpToTypeScript.convertDatesTo"`: "string" sets output type for dates. You can pick between string, Date and string | Date.
-- `"csharpToTypeScript.convertNullablesTo"`: "null" sets output type for nullables (int?) to either null or undefined.
-- `"csharpToTypeScript.toCamelCase"`: true toggles field name conversion to camel case.
-- `"csharpToTypeScript.removeInterfacePrefix"`: true controls whether to remove interface prefixes (IType -> Type).
-- `"csharpToTypeScript.generateImports"`: false toggles simple import statements generation.
-- `"csharpToTypeScript.quotationMark"`: "double" sets quotation marks for import statements & identifiers (double or single).
-- `"csharpToTypeScript.useKebabCase"`: false - use kebab case for file names.
-- `"csharpToTypeScript.appendModelSuffix"`: false - append ".model" suffix to file names.
+- `"csharpToTypeScript.export"`: `true` controls exporting.
+- `"csharpToTypeScript.convertDatesTo"`: `"string"` sets output type for dates. You can pick between string, Date and string Date.
+- `"csharpToTypeScript.convertNullablesTo"`: `"null"` sets output type for nullables (int?) to either null or undefined.
+- `"csharpToTypeScript.toCamelCase"`: `true` toggles field name conversion to camel case.
+- `"csharpToTypeScript.removeInterfacePrefix"`: `true` controls whether to remove interface prefixes (IType -> Type).
+- `"csharpToTypeScript.generateImports"`: `false` toggles simple import statements generation.
+- `"csharpToTypeScript.quotationMark"`: `"double"` sets quotation marks for import statements & identifiers (double or single).
+- `"csharpToTypeScript.useKebabCase"`: `false` - use kebab case for file names.
+- `"csharpToTypeScript.appendModelSuffix"`: `false` - append ".model" suffix to file names.
 

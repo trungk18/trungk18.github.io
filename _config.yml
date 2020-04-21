@@ -9,8 +9,8 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "Trung Vo | JavaScript and more"
-title_separator          : "|"
+title                    : "Trung Vo - JavaScript and more"
+title_separator          : "&#124;"
 name                     : "Trung Vo"
 description              : "Trung Vo - Frontend Developer. Young and passionate, addicted to Front-end. Working with jQuery, AngularJS, Angular, ReactJS. Like photography, running, cooking and reading book. trungk18"
 url                      : "https://trungk18.com"

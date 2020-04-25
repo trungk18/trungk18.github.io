@@ -16,7 +16,8 @@ I started working with TypeScript about two years ago. Most of the time I read a
 
 Overtime, I found this [class-transformer](https://github.com/typestack/class-transformer) library is super helpful. You can install this into your project and start using it from now on to see the different. They supported nested property too so you don't have to worry about that. 
 
- **It is worth mentioning that not all the time we need to cast from JSON object to a class, but sometimes it is really helpful. As per the example above, If I don't have the method `getFullName` in the instance of class, I would create a new util method that take a `User` as argument and return the expected result. In my projects, many times I used [visitor pattern](https://refactoring.guru/design-patterns/visitor/typescript/example) for handling different for each concrete class, and it required the instance of each to be working, not just a plain object. The decision is yours. Parked all properties and methods inside a single class is more encapsulation in Object Oriented Programming while functional programing treated everything as a function.**
+ **It is worth mentioning that not all the time we need to cast from JSON object to a class, but sometimes it is really helpful. As per the example above, If I don't have the method `getFullName` in the instance of class, I could create a new util method that take a plain `User` object as argument and return the expected result. In my projects, many times I used [visitor pattern](https://refactoring.guru/design-patterns/visitor/typescript/example) for handling different type of concrete class, and it is required the instance of each class to be working. It won't work for a plain object.**
+ **The decision is yours. Put all properties and methods inside a single class is the encapsulation in Object Oriented Programming (OOP) while Functional Programing treated everything as a function.**
 
 > The below section was quoted from their readme.
 
@@ -26,7 +27,7 @@ In JavaScript there are two types of objects:
 * class (constructor) objects
 
 Plain objects are objects that are instances of `Object` class.
-Sometimes they are called **literal** objects, when created via `{}` notation.
+Sometimes they are called **literal** objects, when created via `{}` notation. E.g `var obj  =  {}`
 Class objects are instances of classes with own defined constructor, properties and methods.
 Usually you define them via `class` notation.
 
@@ -114,6 +115,7 @@ fetch("/api/users").then((users: Object[]) => {
 
 Now you can use `users[0].getFullName()` and `users[0].isAdult()` methods.
 
-#### This is the result as my console.log in the example does. You could clearly see the type of the object.
+### This is the result as my console.log in the example does. You could clearly see the type of the object.
+
 <br/>
 ![Casting a JSON object to a TypeScript class](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/cast-parse-json-object-to-typescript-class-01.png)

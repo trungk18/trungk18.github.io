@@ -32,6 +32,7 @@ export enum CustomPropertiesTypes {
 ```
 
 apCustomPropertyMoney.ts
+
 ```typescript
 export class APCustomPropertyMoney extends APCustomPropertyBase {
     public currencySymbol: string;
@@ -39,6 +40,7 @@ export class APCustomPropertyMoney extends APCustomPropertyBase {
 ```
 
 apCustomPropertyOption.ts
+
 ```typescript
 export class APCustomPropertyOption extends APCustomPropertyBase {
     public possibleOptions: APCustomPropertySubOption[]
@@ -78,4 +80,3 @@ It is still in the early phase so that currently only supports converting to an 
 - `"csharpToTypeScript.quotationMark"`: `"double"` sets quotation marks for import statements & identifiers (double or single).
 - `"csharpToTypeScript.useKebabCase"`: `false` - use kebab case for file names.
 - `"csharpToTypeScript.appendModelSuffix"`: `false` - append ".model" suffix to file names.
-

@@ -10,6 +10,3 @@ There was some basic questions such as `"1" + 1 will evaluate in what value?`. I
 And then the guys started asking about **Closure**. I answered in a very naive way `It is function which is return in another function...`. The guys on the phone wasn't laughing but I know that I was totally wrong. I only read from this [js_function_closures](https://www.w3schools.com/js/js_function_closures.asp) before.
 
 So today, after more than 4 years working mostly with JavaScript. Built many application from small to large scale that serve ten of thousands users. I hope that I can answer this question in an appropriate way.
-
-
-

@@ -14,7 +14,7 @@ TL;DR - Set [value] on `<option value="true">Yes</option>` will make our model/f
 
 Recently I have to build a dropdown for a simple yes/no input, which output is equivalent to a boolean type. Obviously, we can always use a checkbox for that purpose.
 
-```typescript
+```html
 <select name="ShowSLATimeWindows" class="form-control" [(ngModel)]="showSLATimeWindowValue">
     <option [value]="false">No: Hide the SLA time windows (only display the calculated time windows)</option>
     <option [value]="true">Yes: Show the SLA time windows for each location in the app in addition to the calculated ones</option>
@@ -37,10 +37,10 @@ Based on the documentation, our example above works as expected.
 
 In my case, I can use [ngValue] to set boolean values:
 
-```typescript
+```html
 <select name="ShowSLATimeWindows" class="form-control" [(ngModel)]="showSLATimeWindowValue">
     <option [ngValue]="false">No: Hide the SLA time windows (only display the calculated time windows)</option>                      // value: false (as boolean)
     <option [ngValue]="true">Yes: Show the SLA time windows for each location in the app in addition to the calculated ones</option> // value: true (as boolean)
 </select>
 ```
-See [stackblitz](https://stackblitz.com/edit/angular-value-ngvalue-option?embed=1&file=src/app/app.component.ts), worked perfectly fine. I received the boolean to display the answer correctly.
+See [stackblitz](https://stackblitz.com/edit/angular-value-ngvalue-option?embed=1&file=src/app/app.component.ts), works perfectly fine. I received the boolean to display the answer correctly.

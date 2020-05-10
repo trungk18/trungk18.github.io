@@ -104,7 +104,9 @@ See my demonstration below, you will understand how easily we can create a memor
 4. If you keep the browser open, your application keeps eating the computer memory up to a point the application became unsurprisingly slow
 5. You have to refresh the browser to free up the memory
 
-The below screenshot was recorded after a few minutes after I click `Relive` and `Destroy` about 10+ times. My browser started to hang and unresponsive, I have to close the current tab because I couldn't do anything on this tab.
+**Stress test:**
+
+I opened the [Chrome Performance monitor](https://developers.google.com/web/updates/2017/11/devtools-release-notes#perf-monitor) and started to click `Relive` and `Destroy` continuously. Noticed that the CPU usage and heap size is increasing so quickly. When the CPU is above 60%, my browser is unresponsive, I couldn't even scroll up to the page or select any text on the screen.
 
 ![Understand and prevent the most common memory leaks in Angular application](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/angular-common-memory-leak-use-case-observable-02.gif)
 

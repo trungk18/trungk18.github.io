@@ -119,6 +119,8 @@ ngOnDestroy() {
 }
 ```
 
+A single line of code `this.counterSubscription.unsubscribe()` could save you from a lot of problems in the future...
+
 See the below screenshot when I unsubscribe properly from the subscription. There are no memory leaked occurred.
 
 ![Understand and prevent the most common memory leaks in Angular application](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/angular-common-memory-leak-use-case-observable-03.gif)
@@ -186,6 +188,26 @@ I saw my team always got that problem when we build master-detail UI where we ha
 
 If I open different cars with different Id, It creates a memory leak every time I instantiate the component. `onParamsChange` will be executed x times where x is the number of times `ChildDetailComponent` get initialized.
 
+To fix it, simply unsubscribe from the route event on component destroy.
+
+```javascript
+export class ChildDetailComponent implements OnInit, OnDestroy {
+  subscription: Subscription;
+  constructor(private _route: ActivatedRoute){
+    this.subscription = this._route.params.subscribe(this.onParamsChange.bind(this));
+  }
+
+  onParamsChange(params){
+      let carId = params["carId"];
+      //call API to get car detail by carId
+  }
+
+  ngOnDestroy(){
+    this.subscription.unsubscribe();
+  }
+}
+```
+
 ### 2. Websocket Connections
 
 Very similarly, WebSocket connections must always be closed when unused. I have prepared a simple Websocket component to display crypto prices. You can see the detail inside [stackblitz](https://stackblitz.com/edit/angular-common-memory-leaks?file=src%2Fapp%2Fwebsocket%2Fcoin-price.component.ts).
@@ -229,7 +251,7 @@ export class CoinPriceComponent {
 }
 ```
 
-If I remove the `this.webSocket.close()` line, you will see the memory leak.
+If I remove this line `this.webSocket.close()`, you will see the memory leak.
 
 ![Understand and prevent the most common memory leaks in Angular application](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/angular-common-memory-leak-use-case-observable-04.gif)
 

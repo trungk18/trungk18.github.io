@@ -4,7 +4,7 @@ categories: experience
 tags: angular typescript
 ---
 
-TL;DR - You have to remember to **clean up your Rx subscriptions**. In my experience, this is by far the **most common cause of memory leaks** in Angular applications.
+TL;DR - Remember to **clean up your Rx subscriptions**. In my experience, this is by far the **most common cause of memory leaks** in Angular applications.
 
 ## Working Example
 
@@ -28,12 +28,13 @@ Regardless of the programming language, the memory life cycle is **pretty much a
 
 The second part is explicit in all languages. The first and last parts are explicit in low-level languages but are mostly implicit in high-level languages like JavaScript. The majority of memory management issues occur at the third phase - to release the allocated memory. The most difficult aspect of this stage is determining when the allocated memory is no longer needed.
 
-For more detail on how JS memory allocation works, see [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management).
+For more detail on how JS memory allocation works, see [Memory Management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management).
 
 ## Memory leaks in Angular
 
-**Memory leaks most often arise over time when components are re-rendered multiple times**, e.g through routing or by using the \*ngIf directive, or you are listening to a WebSocket connection in the background and update the UI subsequently. For example, when a user works a whole day on our application without refreshing the browser and it is becoming increasingly slower.
-When the application started to get slower, we tended to reload the browser. By doing so, the browser release all the memory accumulated from the beginning, and our application started fresh again.
+**Memory leaks most often arise over time when components are re-rendered multiple times**, e.g through routing or by using the `*ngIf` directive, or you are listening to a WebSocket connection in the background and update the UI subsequently. For example, when a user works a whole day on our application without refreshing the browser and it is becoming increasingly slower.
+
+When the application started to get slower, we tended to reload the browser. By doing so, the browser release all the memory accumulated from the beginning, and our application started fresh again. But what if there are memory leaks happened and you didn't even notice, so the QA team.
 
 To mimic a scenario, I created a setup with two components, `ParentMemoryLeakedComponent` and `ChildMemoryLeakedComponent`.
 
@@ -95,13 +96,13 @@ See my demonstration below, you will understand how easily we can create a memor
 
 ![Understand and prevent the most common memory leaks in Angular application](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/angular-common-memory-leak-use-case-observable-01.gif)
 
-The flow:
+**The flow:**
 
-1. I click on `Relive` button, the child component is rendered.
-2. After a couple of seconds, I click `Destroy`. The child component is disappeared from the UI, but the `console.log` keeps running. I can see two different component ids on the console.
-3. I clicked `Relive` and `Destroy` back end forth multiple times, the `console.log` keeps repeating multiple times. Think about it this way. If you click 100 times, you will see 100 `console.log` every second.
-4. If you keep the browser open, your application keeps eating the computer memory up to a point the application became unsurprisingly slow.
-5. You have to refresh the browser to free up the memory.
+1. I click on `Relive` button, the child component is rendered
+2. After a couple of seconds, I click `Destroy`. The child component is disappeared from the UI, but the `console.log` keeps running. I can see two different component ids on the console
+3. I clicked `Relive` and `Destroy` back end forth multiple times, the `console.log` keeps repeating multiple times. Think about it this way. If you click 100 times, you will see 100 `console.log` every second
+4. If you keep the browser open, your application keeps eating the computer memory up to a point the application became unsurprisingly slow
+5. You have to refresh the browser to free up the memory
 
 The below screenshot was recorded after a few minutes after I click `Relive` and `Destroy` about 10+ times. My browser started to hang and unresponsive, I have to close the current tab because I couldn't do anything on this tab.
 
@@ -179,9 +180,9 @@ export class ChildDetailComponent implements OnInit, OnDestroy {
 
 I saw my team always got that problem when we build master-detail UI where we have:
 
-1. A list of something. For instance, a list of cars.
-2. Select one, display a car detail view on a different component.
-3. When I open the detail view, I need the `carId` to get the detail data from the API.
+1. A list of something. For instance, a list of cars
+2. Select one, display a car detail view on a different component
+3. When I open the detail view, I need the `carId` to get the detail data from the API
 
 If I open different cars with different Id, It creates a memory leak every time I instantiate the component. `onParamsChange` will be executed x times where x is the number of times `ChildDetailComponent` get initialized.
 
@@ -276,8 +277,8 @@ export class ScrollComponent {
 
 ## Conclusion
 
-1. Memory Leaks are quite hard to find and debug.
-2. Angular does a great job at managing memory; with that said, we need to watch out for open subscriptions (Observables, Subjects, NgRx Store Selections), DOM events, WebSocket connections, etc. **Remember to unsubscribe from Rx subscription**.
+1. Memory Leaks are quite hard to find and debug
+2. Angular does a great job at managing memory; with that said, we need to watch out for open subscriptions (Observables, Subjects, NgRx Store Selections), DOM events, WebSocket connections, etc. **Remember to unsubscribe from Rx subscription**
 
 ### Resource
 

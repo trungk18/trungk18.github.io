@@ -106,7 +106,7 @@ See my demonstration below, you will understand how easily we can create a memor
 
 **Stress test:**
 
-I opened the [Chrome Performance monitor](https://developers.google.com/web/updates/2017/11/devtools-release-notes#perf-monitor) and started to click `Relive` and `Destroy` continuously. Noticed that the CPU usage and heap size is increasing so quickly. When the CPU is above 60%, my browser is unresponsive, I couldn't even scroll up to the page or select any text on the screen.
+I opened the [Chrome Performance monitor](https://developers.google.com/web/updates/2017/11/devtools-release-notes#perf-monitor) and started to click `Relive` and `Destroy` continuously. Noticed that the CPU usage and heap size is increasing so quickly. Up to a point when I clicked the button, but there was a long delay before the browser picked my action, It is only like 40 seconds after I started the test. I have to close the browser afterwards.
 
 ![Understand and prevent the most common memory leaks in Angular application](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/angular-common-memory-leak-use-case-observable-02.gif)
 

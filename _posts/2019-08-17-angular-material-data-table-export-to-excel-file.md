@@ -24,6 +24,8 @@ There are a few things to note:
 
 5. For export with much more flexibility, check the second method where you can pass an array into the export function and still get the excel file at the end. It will solve a lot of problems for you, e.g export a list of specific columns only.
 
+6. It is purely client side method. So if you have server-side pagination with millions of records on your database and you want to export that millions of records data into an excel file. Do it on the server-side instead.
+
 ## Working example
 
 <iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-material-table-export-excel-file?embed=1"></iframe>

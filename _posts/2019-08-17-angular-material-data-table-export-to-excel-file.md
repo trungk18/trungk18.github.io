@@ -15,16 +15,11 @@ I will use the [js-xlsx](https://github.com/SheetJS/js-xlsx) for the main export
 There are a few things to note:
 
 1. `TableUtil` is a class that included all the necessary utility methods for the table. All of these are static methods because we want to use them directly.
-
 2. `exportToExcel` function expects a string for the table id, and a desired file name you want to export. I also added the timestamp to the exported file name.
-
 3. The rest, `js-xlsx` will take care of for us. It is a great library and mature enough, for the excel creation itself. It also allows you to do much more with excel. For instance, you can add more worksheets to a workbook. If you need anything that I didn't mention, please check the [library documentation](https://github.com/SheetJS/js-xlsx)
-
-4. I have tested this method on Angular 5 - 8, work perfectly fine. I haven't had time to test with Ivy and Angular 9 but it should not be a big deal.
-
+4. It is purely client side method. So if you have server-side pagination with millions of records on your database and you want to export that millions of records data into an excel file. Do it on the server-side instead.
 5. For export with much more flexibility, check the second method where you can pass an array into the export function and still get the excel file at the end. It will solve a lot of problems for you, e.g export a list of specific columns only.
-
-6. It is purely client side method. So if you have server-side pagination with millions of records on your database and you want to export that millions of records data into an excel file. Do it on the server-side instead.
+6. I have tested this method on Angular 5 - 8, work perfectly fine. I haven't had time to test with Ivy and Angular 9 but it should not be a big deal.
 
 ## Working example
 

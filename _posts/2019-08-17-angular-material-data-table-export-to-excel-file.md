@@ -27,6 +27,8 @@ There are a few things to note:
 
 ## 1. Export table that was rendered on the UI to Excel file (support both Material table and non Material table)
 
+You can just simply give your table id (without the #) to the `exportToExcel` function, your table will be exported to an Excel file.
+
 tableUtil.ts
 
 ```javascript

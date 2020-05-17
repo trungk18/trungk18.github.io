@@ -18,7 +18,7 @@ This post is to demonstrate how I write a few lines of custom SCSS and JS to mak
 
 My blog is following the system configuration theme (in my use case, Windows 10). It is similar to how Chrome is doing its theme. I will add the toggle dark theme button soon.
 
-![Jekyll dark theme (minimal-mistake)](dark-theme-jekyll-01.gif)
+![Jekyll dark theme (minimal-mistake)](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/dark-theme-jekyll-01.gif)
 
 ## Dark Mode
 

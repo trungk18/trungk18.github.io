@@ -4,11 +4,9 @@ categories: experience
 tags: angular typescript
 ---
 
-TL;DR
+TL;DR - I prefer to use FormGroup to populate the list of checkbox. For checking at least one checkbox was selected, write a custom validator.
 
-1. I prefer to use FormGroup to populate the list of checkbox
-2. Write a custom validator for check at least one checkbox was selected
-3. Working example
+## Working example
 
 <iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-validate-at-least-one-checkbox-was-selected?embed=1&file=src/app/app.component.html&view=preview"></iframe>
 

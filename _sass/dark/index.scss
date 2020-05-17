@@ -21,6 +21,15 @@ html {
       color: $white-500;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $white-800;
+    }
+
     .archive__item-title,
     .page__title {
       color: $white-800;
@@ -76,7 +85,7 @@ html {
         color: $white-500;
       }
     }
-    
+
     .pagination--pager {
       color: $white-750;
     }

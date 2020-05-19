@@ -49,20 +49,20 @@ class NavigationModel {
 }
 ```
 
-So the trick is very simple, you set up a ng-template which take a list of NavigationModel as the parameter. And then render the template itself with children data if there are any children, because children is also a list of NavigationModel.
+So the trick is very simple, you set up a ng-template which take a list of NavigationModel as the parameter. And then render the template itself with children data if there are any children, because children is also a list of NavigationModel. If you are not familiar with ngTemplateOutletContext, see [this question](https://stackoverflow.com/a/45055768/3375906) for more detail 
 
 app.component.html
 
 ```html
 <ul>
-  <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ $implicit: list }"></ng-container>
+  <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ list: list }"></ng-container>
 </ul>
 
-<ng-template #recursiveListTmpl let-list>
+<ng-template #recursiveListTmpl let-list="list">
   <li *ngFor="let item of list">
     {% raw %} {{ item.title }} {% endraw %}
     <ul *ngIf="item.children.length > 0">
-      <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ $implicit: item.children }"></ng-container>
+      <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ list: item.children }"></ng-container>
     </ul>
   </li>
 </ng-template>

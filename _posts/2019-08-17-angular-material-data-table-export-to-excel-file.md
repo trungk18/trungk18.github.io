@@ -1,5 +1,5 @@
 ---
-title: "How to export a table or an array in Angular to excel file"
+title: "How to export a table or an array in Angular to Excel file (xlsx)"
 categories: experience
 tags: angular
 ---
@@ -23,7 +23,7 @@ There are a few things to note:
 
 ## Working example
 
-<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-material-table-export-excel-file?embed=1"></iframe>
+<iframe class="iframe-full-w" src="https://stackblitz.com/edit/angular-material-table-export-excel-xlsx?embed=1&file=app/tableUtil.ts"></iframe>
 
 ## 1. Export table that was rendered on the UI to Excel file (support both Material table and non Material table)
 

@@ -101,11 +101,13 @@ html {
   width: 40px;
   height: 40px;
   line-height: 40px;
-  text-align: center;
-  color: #fff !important;
-  color: rgba(255, 255, 255, 0.8);
+  text-align: center;    
   background: #f7931a;
   border-radius: 50%;
+  
+  .fa-sun-o {
+    color: #fff;
+  }
 }
 
 #DarkThemeToggleIcon:active {

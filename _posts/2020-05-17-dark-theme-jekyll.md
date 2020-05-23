@@ -7,6 +7,7 @@ tags: angular typescript
 TL;DR - Once you go black you never go back
 
 ## Problem
+
 Developers love to work at night, where everything seems quieter than daylight. They love to see their IDE in black too. I used to work on VS 2015 default theme, which is blue. And my colleagues just didn't understand why I don't use the black theme :)) 
 One day I decided to change to the black theme since then I couldn't use the white theme anymore.
 
@@ -175,3 +176,9 @@ var DarkMode = (function () {
   init();
 })();
 ```
+
+### Update 23 May 2020
+
+I added the button to toggle the dark theme manually, everything is working fine except the styling for the disquss section, because it is loaded through an `iframe`. You could refresh the page to have this section loaded properly.
+
+![Jekyll dark theme (minimal-mistake)](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/dark-theme-jekyll-02.gif)

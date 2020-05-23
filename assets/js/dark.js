@@ -4,18 +4,26 @@ var DarkMode = (function () {
   var MOON_ICON = "fa-moon-o";
   var SUN_ICON = "fa-sun-o";
   var DARK_CLASS = "dark";
+  var LIGHT_CLASS = "light";
 
   var storage = {
-    isDark: function () {
+    hasData: function () {
       try {
         return !!localStorage.getItem(DARK_MODE_LOCAL_STORAGE);
       } catch (error) {
         return false;
       }
     },
+    isDark: function(){
+      try {
+        return localStorage.getItem(DARK_MODE_LOCAL_STORAGE) === DARK_CLASS;
+      } catch (error) {
+        return false;
+      }
+    },
     setDarkTheme: function (isDark) {
       try {
-        localStorage.setItem(DARK_MODE_LOCAL_STORAGE, isDark ? DARK_CLASS : "");
+        localStorage.setItem(DARK_MODE_LOCAL_STORAGE, isDark ? DARK_CLASS : LIGHT_CLASS);
       } catch (error) {
 
       }
@@ -27,8 +35,8 @@ var DarkMode = (function () {
   }
 
   function isDark() {
-    if (storage.isDark()) {
-      return true;
+    if (storage.hasData()) {
+      return storage.isDark();
     }
     return isDarkFromSystem();
   }

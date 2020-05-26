@@ -7,8 +7,8 @@ tags: css bootstrap jquery
 In this tutorial, I will show you how to create an animated fixed navigation that will resize on scroll and when you scroll down the page a bit, the header resizes smaller, and gets back bigger when you scroll back to the top with just simple CSS3 animation and jQuery.
 
 - [Github](https://github.com/trungk18/Resizing-Header-On-Scroll)
-- [Demo](http://trungk18.github.io/Resizing-Header-On-Scroll)
-- Codepen, please click to view in full screen.
+- [Demo](https://trungk18.com/resizing-header-on-scroll/)
+- Codepen, please view in full screen.
 
 <iframe height='265' scrolling='no' title='Shrinking Navigation Bar When Scrolling Down' src='//codepen.io/trungk18/embed/opazdV/?height=265&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/trungk18/pen/opazdV/'>Shrinking Navigation Bar When Scrolling Down</a> by Vo Tuan Trung (<a href='https://codepen.io/trungk18'>@trungk18</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>

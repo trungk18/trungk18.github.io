@@ -13,13 +13,8 @@ After crossing this [question](https://stackoverflow.com/q/17931571/3375906), I 
 
 ## Solution 1. Run the setTimeout to trigger debugger.
 
-1. Run the following javascript in the console. This will break into the debugger in 5 seconds.
-
-```javascript
-setTimeout(function(){debugger;}, 5000)
-```
-
-2. Show your element (by hovering or however) and wait until Chrome breaks into the Debugger.
+1. Run the following javascript `setTimeout(function(){ debugger }, 5000)` in the console. This will break into the debugger in 5 seconds.
+2. Show your element (by hovering on the UI or whatever you need to do0) and wait until Chrome breaks into the Debugger after 5 seconds.
 3. Go to the Elements tab in inspector
 4. Find your element and have fun modifying the CSS
 

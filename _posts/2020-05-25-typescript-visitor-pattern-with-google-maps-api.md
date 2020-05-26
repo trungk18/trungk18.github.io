@@ -294,6 +294,10 @@ But on this use case of the map, I like how visitor pattern has transformed my c
 
 ![Using Visitor design pattern with Typescript](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/angular-typescript-visitor-pattern-with-google-maps-api-02.gif)
 
+## Source code
+
+[https://github.com/trungk18/angular-typescript-visitor-design-pattern-with-google-maps-api][1]
+
 I hope it will help you guys get the idea of visitor pattern :) I know I am not a good writer yet, appreciate all your comments and contributions.
 
 [0]: https://refactoring.guru/design-patterns/visitor/typescript/example

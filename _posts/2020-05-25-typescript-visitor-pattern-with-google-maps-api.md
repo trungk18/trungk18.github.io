@@ -12,7 +12,7 @@ TL;DR - If you have multiple concrete classes that inherit from the same base cl
 
 There weren't a lot of examples on Visitor pattern because of its popularity compared to the well-known Factory or Command pattern. And with the available example that I could find, it is [very abstraction][0], you wouldn't be able to imagine how to use it in your real-world use case.
 
-In Zyllem, we are using it extensively on the server-side code. On the client-side, I took me sometimes to have my first visitor running on production.
+In Zyllem, we are using it extensively on the server-side code. On the client-side, I took me sometimes to have my first visitor running on production. The example below was not that first one though :))
 
 ## Use case
 
@@ -198,7 +198,7 @@ export class MarkerMouseClickVisitor implements CustomMarkerVisitor {
 
 I used to do it differently with all the switch/case block. See the example code below for the same UI behavior with switch/case approach and visitor pattern with a mouseover behavior. I personally like the visitor better. Because I used to have the switch/case for every single behavior and I don't know, I just don't like too many switch/case blocks. Noted that the below implementation was a much simpler version on my real-world application where it involves router and other services as well. Separated it into a visitor helped me to better understand and isolate my code if there is any bug.
 
-**Switch/Case**
+#### Switch/Case
 
 ```javascript
 addMarkerToMap(markerData: CustomMarker<any>) {
@@ -231,7 +231,7 @@ addMarkerToMap(markerData: CustomMarker<any>) {
 }
 ```
 
-**Visitor**
+#### Visitor
 
 ```javascript
 addMarkerToMap(markerData: CustomMarker<any>) {
@@ -272,7 +272,7 @@ export class MarkerMouseOverVisitor implements CustomMarkerVisitor {
 
 You see how we still can access to `markerData` variable on the callback of the mouseover despite the `addMarkerToMap` has been finished executing. If you have been working with JavaScript long enough, you will know what I am trying to say.
 
-It is JavaScript <u>**Closure**</u>.
+It is <u>JavaScript Closure</u>.
 
 ## Pros and cons
 

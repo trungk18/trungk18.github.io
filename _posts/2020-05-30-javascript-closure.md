@@ -35,9 +35,9 @@ var addOne = add(1);
 var sumOfOnePlusTwo = addOne(2); //3
 ```
 
-1. function `add` was created with an argument `a`. When invoke `add` function, it will return another function `addMore` that has `b` as the local argument. Noted that how `addMore` also has access to `a`, which is the argument of the outer function `add`.
+1. Function `add` was created with an argument `a`. When invoke `add`, it will return another function `addMore` that has `b` as the local argument. Noted that how `addMore` also has access to `a`, which is the argument of the outer function `add`.
 
-2. I created a variable `addOne` to the return value of `add(1)`. At this point, `addOne` is actually another function that can be invoked.
+2. I created a variable `addOne` and assigned it to the return value of `add(1)`. At this point, `addOne` is actually another function that can be invoked.
 
 3. I created another variable `sumOfOnePlusTwo` and assigned it to the return value of `addOne(2)`, which is 3. 
 It means that somehow, the `addOne` function has access to `1`, and then do the add operation with `2` that I passed in.
@@ -46,7 +46,7 @@ Where is the value `1` of an argument `a` stored, even the function `add` has al
 
 In some programming languages, the local variables within a function exist for just the duration of that function's execution. Once `add()` finishes executing, you might expect that the `a` argument would no longer be accessible. However, because the code still works as expected, this is obviously not the case in JavaScript.
 
-The reason is that functions in JavaScript form closures.
+The reason is that functions in JavaScript form **closures**.
 
 A closure is a combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives **you access to an outer function’s scope from an inner function**. <u>Even if the outer function has already been invoked.</u>
 
@@ -64,7 +64,7 @@ I only exposed the `addRequest` to the outside world. The rest will stay inside 
 
 ### Event handler
 
-Much of the code written in front-end JavaScript is event-based. You define some behavior, and then attach it to an event that is triggered by the user (such as a click or a keypress). The code is attached as a callback (a single function that is executed in response to the event).
+Much of the code written in front-end JavaScript is **event-based**. You define some behavior, and then attach it to an event that is triggered by the user (such as a click or a keypress). The code is attached as a callback (a single function that is executed in response to the event).
 
 For instance, suppose we want to add buttons to a page to adjust the text size. One way of doing this is to specify the font-size of the body element (in pixels), and then set the size of the other elements on the page (such as headers) using the relative em unit:
 

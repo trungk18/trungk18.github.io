@@ -5,7 +5,7 @@ categories: experience
 
 In short, a closure is not the function that is returned in another function. A closure is a combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function.
 
---
+<hr />
 
 I still remember an interview with the customer five years ago when I worked in Hanoi. I was just graduated from university at that time and didn't have much experience.
 

@@ -10,7 +10,7 @@ TL;DR - If you have multiple concrete classes that inherit from the same base cl
 
 > Visitor is a behavioral design pattern that allows adding new behaviors to existing class hierarchy without altering any existing code.
 
-There weren't a lot of examples on Visitor pattern because of its popularity compared to the well-known Factory or Command pattern. And with the available example that I could find, it is [very abstraction][0], you wouldn't be able to imagine how to use it in your real-world use case.
+There weren't a lot of examples on Visitor pattern because of its popularity compared to the well-known Factory or Command pattern. And with the available example that I could find, it is [very conceptual][0], you wouldn't be able to imagine how to use it in your real-world use case.
 
 In Zyllem, we are using it extensively on the server-side code. On the client-side, I took me sometimes to have my first visitor running on production. The example below was not that first one though :))
 

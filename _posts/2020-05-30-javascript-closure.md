@@ -22,37 +22,61 @@ After more than four years working with JavaScript and has built many applicatio
 Consider the following example
 
 ```javascript
-//add: outer function
-function add(a) {
-
-  //addMore: inner function
-  return function addMore(b) {
+//sum: outer function
+function sum(a) {
+  //add: inner function
+  return function add(b) {
     return a + b;
   };
 }
 
-var addOne = add(1);
-var sumOfOnePlusTwo = addOne(2); //3
+var sumTwo = sum(2);
+var sumOfTwoAndThree = sumTwo(3); //5
 ```
 
-1. Function `add` was created with an argument `a`. When invoke `add`, it will return another function `addMore` that has `b` as the local argument. Noted that how `addMore` also has access to `a`, which is the argument of the outer function `add`.
+1. Function `sum` was created with an argument `a`. When invoke `sum`, it will return another function `add` that has `b` as the local argument. Noted that how `add` also has access to `a`, which is the argument of the outer function `sum`.
 
-2. I created a variable `addOne` and assigned it to the return value of `add(1)`. At this point, `addOne` is actually another function that can be invoked.
+2. I created a variable `sumTwo` and assigned it to the return value of `sum(2)`. At this point, `sumTwo` is actually another function that can be invoked, which is `add(b)`.
 
-3. I created another variable `sumOfOnePlusTwo` and assigned it to the return value of `addOne(2)`, which is 3. 
-It means that somehow, the `addOne` function has access to `1`, and then do the add operation with `2` that I passed in.
+3. I created another variable `sumOfTwoAndThree` and assigned it to the return value of `sumTwo(3)`, which is 5. 
 
-Where is the value `1` of an argument `a` stored, even the function `add` has already been executed and its value was assigned to `addOne`?
+It means that somehow, the `sumTwo` function still has access to `2`, and then do the add operation with `3` that I passed in.
 
-In some programming languages, the local variables within a function exist for just the duration of that function's execution. Once `add()` finishes executing, you might expect that the `a` argument would no longer be accessible. However, because the code still works as expected, this is obviously not the case in JavaScript.
+Where is the value `2` of an argument `a` stored, even the function `sum` has already been executed and its value was assigned to `sumTwo`?
+
+In some programming languages, the local variables within a function exist for just the duration of that function's execution. Once `sum()` finishes executing, you might expect that the `a` argument would no longer be accessible. However, because the code still works as expected, this is obviously not the case in JavaScript.
 
 The reason is that functions in JavaScript form **closures**.
 
-A closure is a combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives **you access to an outer function’s scope from an inner function**. <u>Even if the outer function has already been invoked.</u>
+A <u>closure</u> is a combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives **you access to an outer function’s scope from an inner function**. <u>Even if the outer function has already been invoked.</u>
 
 ![What is JavaScript Closure?](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/javascript-closure-01.png)
 
-Look at the above screenshot from VSCode debugger, you will see that when invoked the `addOne(2)`, the closure contains `a : 1`. While the local scope contains `b : 2`.
+Look at the above screenshot from VSCode debugger, you will see that when invoked the `sumTwo(3)`, the closure contains `a : 2`. While the local scope contains `b : 3`.
+
+You could also invoke the function differently.
+
+```javascript
+//sum: outer function
+function sum(a) {
+  //add: inner function
+  return function add(b) {
+    return a + b;
+  };
+}
+
+sum(2)(3);
+
+// Is equivalent to...
+sum(2);
+function add(b){
+    return 2+b;
+}
+add(3);
+
+// Which becomes...
+return 2+3; // 5
+```
 
 ## Usage
 
@@ -119,9 +143,11 @@ document.getElementById('size-16').onclick = size16;
 
 - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures][3]
 - [https://stackoverflow.com/a/111111/3375906][4]
+- [https://stackoverflow.com/a/35320692/3375906][5]
 
 [0]: https://www.w3schools.com/js/js_function_closures.asp
 [1]: https://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript
 [2]: https://trungk18.com/experience/limit-the-number-of-simultaneous-ajax-requests/
 [3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 [4]: https://stackoverflow.com/a/111111/3375906
+[5]: https://stackoverflow.com/a/35320692/3375906

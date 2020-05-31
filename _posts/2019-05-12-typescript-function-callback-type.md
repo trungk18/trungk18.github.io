@@ -113,7 +113,7 @@ type MyHandler = (message: string) => void;
 ## Reference
 
 - [TypeScript handbook function type][0]
-- [Stack][1]
+- [https://stackoverflow.com/q/13137350/3375906][1]
 
 [0]: https://www.typescriptlang.org/docs/handbook/interfaces.html#function-types
 [1]: https://stackoverflow.com/q/13137350/3375906

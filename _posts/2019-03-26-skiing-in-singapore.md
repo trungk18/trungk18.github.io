@@ -9,7 +9,7 @@ I read about this one on a [Senior Frontend JD](https://stackoverflow.com/jobs/1
 
 ## Source code
 
-So basically it is a common tree traverse problem. I use the recursive function to solve it. I put my detail comment on the source code. Please help yourself. If there are any comments, just let me know. 
+So basically it is a common tree traverse problem. I use the recursive function to solve it. I put my detail comment on the source code. Please help yourself. If there are any comments, just let me know.
 
 If you managed to run it on your local, you will get the number which is represent for a real email that you could send your resume to. You will get more advantage from doing so If you want to join Redmart.
 
@@ -88,13 +88,13 @@ class SkiingInSingapore {
 
 There are 2 text files, named corresponding as.
 
-1. [test.txt](https://raw.githubusercontent.com/trungk18/algorithm-training/master/001.%20Skiing%20in%20Singapore/test.txt) - the 4x4 matrix as you see below
+1. [test.txt](https://raw.githubusercontent.com/trungk18/algorithm-training/master/001.%20Skiing%20in%20Singapore/test.txt) - the 4x4 matrix as you see on the below problem
 
 2. [map.txt](https://raw.githubusercontent.com/trungk18/algorithm-training/master/001.%20Skiing%20in%20Singapore/map.txt) - the 1000x1000 matrix
 
 Just change the name on **app.ts** and you will get the result. I will add the unit test later.
 
----
+## Problem
 
 [Problem link](http://geeks.redmart.com/2015/01/07/skiing-in-singapore-a-coding-diversion/)
 

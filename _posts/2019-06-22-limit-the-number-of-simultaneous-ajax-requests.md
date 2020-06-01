@@ -62,3 +62,5 @@ lazyLoadAjaxManager.addRequest("https://example.com/request4");
 ```
 
 Basically, I first pushed all request url to a queue with a function called `addRequest` and call `checkQueue`. `checkQueue` checks to see if there are items in the queue and if the number of active requests is less than `MAX_PARALLEL_CALL`. If these conditions are met, it pops a request from the queue and turns it into a real AJAX request. Then it attaches a done handler to the request that decreases the active request count and calls `checkQueue`.
+
+> Why I am still using `var`? Because it is the pure JS file will be served directly with no Babel or TypeScript compiled. So for safe, I am still using the old syntax.

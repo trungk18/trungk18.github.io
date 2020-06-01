@@ -13,9 +13,15 @@ There were some basic questions such as `"1" + 1 will evaluate in what value?`. 
 
 And then the guys started asking about **Closure**. I answered in a very naive way `It is a function which is return in another function...`. The guys on the phone weren't laughing but I know that I was wrong. I only read about Closure from [w3schools][0] before.
 
-After more than four years working with JavaScript and has built many applications from small to large scale that serve ten of thousands of users, I hope that I can properly answer this question.
+Closure is not easy to digest. It has always been a bit of a mystery to me. I have read multiple articles, I have used closures in my work, sometimes I even used a closure without realizing I was using a closure. After more than four years working with JavaScript and has built many applications from small to large scale that serve ten of thousands of users, I hope that I can properly answer this question.
 
 > Many parts of this blog post are heavily influenced by and taken from an excellent article on [MDN][3].
+
+## Execution context
+
+Some concepts are important to understand before you can fully get the idea of closures. One of them is the [execution context][7]. [This article][8] has a very good primer on Execution Context.
+
+![What is JavaScript Closure?][9]
 
 ## What is a Closure?
 
@@ -48,7 +54,11 @@ In some programming languages, the local variables within a function exist for j
 
 The reason is that functions in JavaScript form **closures**.
 
-A <u>closure</u> is a combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives **you access to an outer function’s scope from an inner function**. <u>Even if the outer function has already been invoked.</u>
+A <u>closure</u> is a combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives **you access to an outer function’s scope from an inner function**. <u>Even if the outer function has already been invoked.</u>.
+
+In JavaScript, closures are created every time a function is created, at function creation time.
+
+Whenever you <u>declare a new function</u> and assign it to a variable, you store the function definition, as well as a <u>closure</u>. The closure contains all the variables that are in scope at the time of creation of the function. It is analogous to a backpack. A function definition comes with a little backpack. And in its pack it stores all the variables that were in scope at the time that the function definition was created.
 
 ![What is JavaScript Closure?](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/javascript-closure-01.png)
 
@@ -144,6 +154,7 @@ document.getElementById('size-16').onclick = size16;
 - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures][3]
 - [https://stackoverflow.com/a/111111/3375906][4]
 - [https://stackoverflow.com/a/35320692/3375906][5]
+- [https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8][6]
 
 [0]: https://www.w3schools.com/js/js_function_closures.asp
 [1]: https://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript
@@ -151,3 +162,7 @@ document.getElementById('size-16').onclick = size16;
 [3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 [4]: https://stackoverflow.com/a/111111/3375906
 [5]: https://stackoverflow.com/a/35320692/3375906
+[6]: https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8
+[7]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+[8]: http://davidshariff.com/blog/what-is-the-execution-context-in-javascript/
+[9]: http://davidshariff.com/blog/wp-content/uploads/2012/06/img1.jpg

@@ -155,6 +155,7 @@ document.getElementById('size-16').onclick = size16;
 - [https://stackoverflow.com/a/111111/3375906][4]
 - [https://stackoverflow.com/a/35320692/3375906][5]
 - [https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8][6]
+- [https://www.freecodecamp.org/news/whats-a-javascript-closure-in-plain-english-please-6a1fc1d2ff1c][10]
 
 [0]: https://www.w3schools.com/js/js_function_closures.asp
 [1]: https://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript
@@ -166,3 +167,4 @@ document.getElementById('size-16').onclick = size16;
 [7]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 [8]: http://davidshariff.com/blog/what-is-the-execution-context-in-javascript/
 [9]: http://davidshariff.com/blog/wp-content/uploads/2012/06/img1.jpg
+[10]: https://www.freecodecamp.org/news/whats-a-javascript-closure-in-plain-english-please-6a1fc1d2ff1c/

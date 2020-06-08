@@ -44,7 +44,7 @@ var sumOfTwoAndThree = sumTwo(3); //5
 
 2. I created a variable `sumTwo` and assigned it to the return value of `sum(2)`. At this point, `sumTwo` is actually another function that can be invoked, which is `add(b)`.
 
-3. I created another variable `sumOfTwoAndThree` and assigned it to the return value of `sumTwo(3)`, which is 5. 
+3. I created another variable `sumOfTwoAndThree` and assigned it to the return value of `sumTwo(3)`, which is 5.
 
 It means that somehow, the `sumTwo` function still has access to `2`, and then do the add operation with `3` that I passed in.
 
@@ -54,7 +54,7 @@ In some programming languages, the local variables within a function exist for j
 
 The reason is that functions in JavaScript form **closures**.
 
-A <u>closure</u> is a combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives **you access to an outer function’s scope from an inner function**. <u>Even if the outer function has already been invoked.</u>.
+A <u>closure</u> is a combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives **you access to an outer function’s scope from an inner function**. <u>Even when the outer function has already been invoked and returned</u>.
 
 In JavaScript, closures are created every time a function is created, at function creation time.
 
@@ -79,20 +79,20 @@ sum(2)(3);
 
 // Is equivalent to...
 sum(2);
-function add(b){
-    return 2+b;
+function add(b) {
+  return 2 + b;
 }
 add(3);
 
 // Which becomes...
-return 2+3; // 5
+return 2 + 3; // 5
 ```
 
 ## Usage
 
 ### Emulating private methods with closures
 
-I usually rely on [Revealing Module Pattern][1] to have the ability to define private property and method. One of the examples I have already published, you can read [Limit the number of simultaneous ajax requests][2]. 
+I usually rely on [Revealing Module Pattern][1] to have the ability to define private property and method. One of the examples I have already published, you can read [Limit the number of simultaneous ajax requests][2].
 
 I only exposed the `addRequest` to the outside world. The rest will stay inside the closure and nobody else can access it. By doing so, I have control over my code, and also don't pollute the global context by introducing global variables.
 
@@ -123,8 +123,8 @@ Here's the JavaScript:
 
 ```javascript
 function makeSizer(size) {
-  return function() {
-    document.body.style.fontSize = size + 'px';
+  return function () {
+    document.body.style.fontSize = size + "px";
   };
 }
 
@@ -136,9 +136,9 @@ var size16 = makeSizer(16);
 `size12`, `size14`, and `size16` are now functions that resize the body text to 12, 14, and 16 pixels, respectively. You can attach them to buttons (in this case hyperlinks) as demonstrated in the following code example.
 
 ```javascript
-document.getElementById('size-12').onclick = size12;
-document.getElementById('size-14').onclick = size14;
-document.getElementById('size-16').onclick = size16;
+document.getElementById("size-12").onclick = size12;
+document.getElementById("size-14").onclick = size14;
+document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
@@ -148,6 +148,10 @@ document.getElementById('size-16').onclick = size16;
 ```
 
 <iframe width="100%" height="300" src="//jsfiddle.net/vnkuZ/7726/embedded/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+### Partial application and currying
+
+See [this answer][11] for more detail.
 
 ## References
 
@@ -168,3 +172,4 @@ document.getElementById('size-16').onclick = size16;
 [8]: http://davidshariff.com/blog/what-is-the-execution-context-in-javascript/
 [9]: http://davidshariff.com/blog/wp-content/uploads/2012/06/img1.jpg
 [10]: https://www.freecodecamp.org/news/whats-a-javascript-closure-in-plain-english-please-6a1fc1d2ff1c/
+[11]: https://stackoverflow.com/questions/218025/what-is-the-difference-between-currying-and-partial-application

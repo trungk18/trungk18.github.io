@@ -21,22 +21,22 @@ If you'd like to contribute, please fork the repository and make changes as you'
 
 ## Table of Contents
 
-  - [Capitalization](https://github.com/trungk18/front-end-editorial-style-guide#capitalization)
-  - [Message Templates (Common Errors, Confirmations, etc.)](https://github.com/trungk18/front-end-editorial-style-guide#message-templates-common-errors-confirmations-etc)
-  - [Common Word Spellings](https://github.com/trungk18/front-end-editorial-style-guide#common-word-spellings)
-  - [Spelling and Formatting Rule](https://github.com/trungk18/front-end-editorial-style-guide#spelling-and-formatting-rule)
-    - [Spelling](https://github.com/trungk18/front-end-editorial-style-guide#spelling)
-    - [Numbers](https://github.com/trungk18/front-end-editorial-style-guide#numbers)
-    - [Date and time](https://github.com/trungk18/front-end-editorial-style-guide#date-and-time)
-    - [Units of measurement](https://github.com/trungk18/front-end-editorial-style-guide#units-of-measurement)
-      - [Time](https://github.com/trungk18/front-end-editorial-style-guide#time)
-      - [Distance](https://github.com/trungk18/front-end-editorial-style-guide#distance)
-    - [Commas](https://github.com/trungk18/front-end-editorial-style-guide#commas)
-  - [Common Grammar Dilemmas](https://github.com/trungk18/front-end-editorial-style-guide#common-grammar-dilemmas)
-    - [1. Plural Mishaps](https://github.com/trungk18/front-end-editorial-style-guide#1-plural-mishaps)
-    - [2. "&" versus "And"](https://github.com/trungk18/front-end-editorial-style-guide#2-%22%22-versus-%22and%22)
-    - [3. One word versus two words](https://github.com/trungk18/front-end-editorial-style-guide#3-one-word-versus-two-words)
-  - [Contributing](https://github.com/trungk18/front-end-editorial-style-guide#contributing)
+- [Capitalization](https://github.com/trungk18/front-end-editorial-style-guide#capitalization)
+- [Message Templates (Common Errors, Confirmations, etc.)](https://github.com/trungk18/front-end-editorial-style-guide#message-templates-common-errors-confirmations-etc)
+- [Common Word Spellings](https://github.com/trungk18/front-end-editorial-style-guide#common-word-spellings)
+- [Spelling and Formatting Rule](https://github.com/trungk18/front-end-editorial-style-guide#spelling-and-formatting-rule)
+  - [Spelling](https://github.com/trungk18/front-end-editorial-style-guide#spelling)
+  - [Numbers](https://github.com/trungk18/front-end-editorial-style-guide#numbers)
+  - [Date and time](https://github.com/trungk18/front-end-editorial-style-guide#date-and-time)
+  - [Units of measurement](https://github.com/trungk18/front-end-editorial-style-guide#units-of-measurement)
+    - [Time](https://github.com/trungk18/front-end-editorial-style-guide#time)
+    - [Distance](https://github.com/trungk18/front-end-editorial-style-guide#distance)
+  - [Commas](https://github.com/trungk18/front-end-editorial-style-guide#commas)
+- [Common Grammar Dilemmas](https://github.com/trungk18/front-end-editorial-style-guide#common-grammar-dilemmas)
+  - [1. Plural Mishaps](https://github.com/trungk18/front-end-editorial-style-guide#1-plural-mishaps)
+  - [2. "&" versus "And"](https://github.com/trungk18/front-end-editorial-style-guide#2-%22%22-versus-%22and%22)
+  - [3. One word versus two words](https://github.com/trungk18/front-end-editorial-style-guide#3-one-word-versus-two-words)
+- [Contributing](https://github.com/trungk18/front-end-editorial-style-guide#contributing)
 
 [0]: http://zyllem.com/
 [issues]: https://github.com/trungk18/front-end-editorial-style-guide/issues/new

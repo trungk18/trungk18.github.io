@@ -1,5 +1,198 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting to https://trungk18.com/</title>
-<meta http-equiv="refresh" content="0; URL=https://trungk18.com/">
-<link rel="canonical" href="https://trungk18.com/">
+
+<head>
+    <meta charset="utf-8">
+    <title>Trung Vo - Front end Developer</title>
+    <link rel="canonical"
+          href="https://trungk18.com/">
+
+    <style>
+        /*COMMON CSS*/
+        body {
+            position: relative;
+            background: linear-gradient(135deg, #6ec575 0, #3b8686 100%);
+            font: normal 14px/1.618em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+
+        .wrapper {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .heading {
+            font-weight: 500;
+            margin: 0px 0px 5px 0px;
+        }
+
+        p {
+            margin: 0px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .profile-card {
+            position: absolute;
+            max-width: 300px;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            background: #FFFFFF;
+            border-radius: 4px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .profile-summary {
+            width: auto;
+            height: auto;
+            padding: 20px 20px 0;
+            display: block;
+        }
+
+        .profile-summary a {
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            margin: 25px 30px;
+        }
+
+        .profile-summary a>img {
+            width: 120px;
+            max-width: 100%;
+            border-radius: 50%;
+            box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+            -webkit-transition: box-shadow 0.3s ease;
+            -moz-transition: box-shadow 0.3s ease;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .profile-summary a:hover>img {
+            box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-summary .profile-nickname {
+            color: #FF5722;
+            font-weight: 500;
+            margin: 0px 0px 5px 0px;
+        }
+
+        .profile-bio {
+            width: auto;
+            height: auto;
+            padding: 15px 20px 20px;
+            display: block;
+            color: #333333;
+        }
+
+        .profile-social-links {
+            padding: 0 20px 15px;
+        }
+
+        .profile-social-links li {
+            list-style: none;
+            margin: -5px 0px 0px 0px;
+            padding: 0px;
+            float: left;
+            width: 20%;
+            text-align: center;
+        }
+
+        .profile-social-links li a {
+            display: inline-block;
+            color: red;
+            width: 24px;
+            height: 24px;
+            padding: 6px;
+            position: relative;
+        }
+
+        .redirect-container {
+            font-size: 11px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+    </style>
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <content class="profile-card">
+            <header class="profile-summary">
+                <a target="_blank"
+                   href="https://trungk18.com/"><img src="https://trungk18.com/img/profile.png"
+                         alt="trungk18"></a>
+                <h2 class="heading profile-nickname">Trung Vo</h2>
+                <h3 class="heading">Front-end Developer</h3>
+            </header>
+
+            <section class="profile-bio">
+                <p>Young and passionate, addicted to Front-end. Like photography, running, cooking and reading book.</p>
+                <p>I am currently working in Singapore.</p>
+            </section>
+
+            <ul class="profile-social-links">
+                <li title="Codepen">
+                    <a target="_blank"
+                       href="https://codepen.io/trungk18/">
+                        <i class="fa fa-codepen"></i>
+                    </a>
+                </li>
+                <li title="Github">
+                    <a target="_blank"
+                       href="https://github.com/trungk18">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+                <li title="Stackoverflow">
+                    <a target="_blank"
+                       href="http://stackoverflow.com/users/3375906/trungk18">
+                        <i class="fa fa-stack-overflow"></i>
+                    </a>
+                </li>
+                <li title="Linkedin">
+                    <a target="_blank"
+                       href="https://www.linkedin.com/in/trungk18">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li title="Skype">
+                    <a target="_blank"
+                       href="skype:trungk18?chat">
+                        <i class="fa fa-skype"></i>
+                    </a>
+                </li>
+            </ul>
+            <!--/profile-social-links-->
+        </content>
+        <p class="redirect-container">Auto redirect to <a href="https://trungk18.com">https://trungk18.com</a> in <span id="Seconds">10</span> seconds.
+            <!--/profile-card-->
+    </div>
+    <!--/wrapper-->
+    <script>
+        var redirectFunc = (function () {
+            var REDIRECT_SECONDS = 10;
+            var seconds = document.getElementById("Seconds");
+            setInterval(() => {
+                REDIRECT_SECONDS--;
+                seconds.innerText = REDIRECT_SECONDS;
+                if (REDIRECT_SECONDS === 0) {
+                    window.location.href = "https://trungk18.com/"
+                }
+            }, 1000);
+        })()
+    </script>
+</body>
